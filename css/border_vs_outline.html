@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border vs outline</title>
+    <style>
+        .box {
+            display: flex;
+            width: 1000px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        
+        .box-1 {
+            width: 500px;
+            height: 300px;
+            background-color: aqua;
+            outline: 4px solid blue;
+            /* outline-offset: -4px; */
+        }
+        
+        .box-2 {
+            width: 500px;
+            height: 300px;
+            background-color: bisque;
+        }
+        
+        .box-two {
+            display: flex;
+            width: 1000px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        
+        .box-3 {
+            width: 500px;
+            height: 300px;
+            background-color: aqua;
+            border: 4px solid red;
+        }
+        
+        .box-4 {
+            width: 500px;
+            height: 300px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="box">
+            <div class="box-1">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam laboriosam itaque modi architecto, minima sint iure debitis error atque autem, adipisci earum. Voluptatem, quod incidunt. Voluptatibus hic deleniti sint qui.</p>
+
+            </div>
+            <div class="box-2">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam laboriosam itaque modi architecto, minima sint iure debitis error atque autem, adipisci earum. Voluptatem, quod incidunt. Voluptatibus hic deleniti sint qui.</p>
+            </div>
+
+        </div>
+
+        <br><br><br><br><br>
+
+
+        <div class="box-two">
+            <div class="box-3">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam laboriosam itaque modi architecto, minima sint iure debitis error atque autem, adipisci earum. Voluptatem, quod incidunt. Voluptatibus hic deleniti sint qui.</p>
+
+            </div>
+            <div class="box-4">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam laboriosam itaque modi architecto, minima sint iure debitis error atque autem, adipisci earum. Voluptatem, quod incidunt. Voluptatibus hic deleniti sint qui.</p>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

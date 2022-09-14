@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator_selectors</title>
+
+    <style>
+        /* descendant selector (space) */
+        
+        .box p {
+            color: blue;
+        }
+        /* child selector */
+        
+        .box>h4 {
+            background-color: antiquewhite;
+        }
+        /* adjacent sibling selector (+) */
+        
+        .kaushik h1+p {
+            background-color: blue;
+            color: aliceblue;
+        }
+        /* general sibling selector (~) */
+        
+        .valiya h1~p {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- descendant selector (space) -->
+
+    <p>------------ descendant selector (space) --------------------</p>
+
+    <div class="box">
+        <p> box paragraph one</p>
+        <p> box paragraph two</p>
+        <div class="underbox">
+            <p> underbox paragraph one</p>
+            <p> underbox paragraph two</p>
+
+        </div>
+    </div>
+
+    <!-- child selector (>) -->
+
+    <p>------------child selector (>)--------------------</p>
+
+    <div class="box">
+        <h4> box paragraph one</h4>
+        <h4> box paragraph two</h4>
+        <div class="underbox">
+            <h4> underbox paragraph one</h4>
+            <h4> underbox paragraph two</h4>
+
+        </div>
+    </div>
+
+
+    <!-- adjacent sibling selector (+) -->
+
+    <p>------------adjacent sibling selector (+)--------------------</p>
+
+    <div class="kaushik">
+        <h1>kaushik valiya</h1>
+        <p>kaushik valiya</p>
+        <p>kaushik valiya</p>
+    </div>
+
+
+
+    <!-- general sibling selector (~) -->
+
+    <p>------------general sibling selector (~)--------------------</p>
+
+    <div class="valiya">
+        <h1>kaushik valiya</h1>
+        <p>kaushik valiya</p>
+        <p>kaushik valiya</p>
+        <p>kaushik valiya</p>
+        <p>kaushik valiya</p>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

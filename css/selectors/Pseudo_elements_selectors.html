@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elements selectors</title>
+    <style>
+        .paragraph ::first-letter {
+            font-size: 50px;
+            color: blue;
+        }
+        
+        .paragraph ::first-line {
+            font-size: 50px;
+            color: blue;
+        }
+        
+        h1::before {
+            content: url(https://thumbs.dreamstime.com/b/thumbs-up-emoticon-vector-design-showing-73992493.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <div class="paragraph">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad tenetur a aspernatur officiis neque deserunt architecto possimus expedita voluptatum, dolorum id quo, minima, nihil aut nesciunt fugiat aperiam. Error, ratione.</p>
+    </div>
+
+</body>
+
+</html>
