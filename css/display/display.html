@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .row {
+            border: 2px solid red;
+            display: flex;
+            flex-wrap: wrap;
+            /* flex-wrap: wrap-reverse; */
+        }
+        
+        .col-33 {
+            border: 2px solid black;
+            width: 33.33%;
+        }
+        
+        .box-big {
+            height: 200px;
+            border: 2px solid red;
+        }
+        
+        .box-big .box {
+            border: 2px solid red;
+            display: inline;
+        }
+        
+        .box {
+            /* padding: 20px; */
+            border: 2px solid black;
+        }
+        
+        .text-1 ul li {
+            display: inline-block;
+            padding: 0 30px;
+        }
+        
+        .text-11 {
+            flex-direction: row-reverse;
+            display: flex;
+        }
+        
+        .box-1 {
+            margin: 5px;
+            border: 2px solid;
+            height: 30px;
+            width: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>display-flex / flex-wrap: wrap; / flex-wrap: wrap-reverse; </h2>
+    <div class="row">
+        <div class="col-33">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima voluptatum, omnis possimus vero nisi aliquam fugit quod debitis error amet voluptatibus quia commodi saepe. Perferendis voluptates quaerat vel sed suscipit.</p>
+        </div>
+        <div class="col-33">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima voluptatum, omnis possimus vero nisi aliquam fugit quod debitis error amet voluptatibus quia commodi saepe. Perferendis voluptates quaerat vel sed suscipit.</p>
+        </div>
+        <div class="col-33">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima voluptatum, omnis possimus vero nisi aliquam fugit quod debitis error amet voluptatibus quia commodi saepe. Perferendis voluptates quaerat vel sed suscipit.</p>
+        </div>
+        <div class="col-33">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima voluptatum, omnis possimus vero nisi aliquam fugit quod debitis error amet voluptatibus quia commodi saepe. Perferendis voluptates quaerat vel sed suscipit.</p>
+        </div>
+    </div>
+    <br>
+    <h2>display-inline</h2>
+    <br>
+    <br>
+    <div class="box-big">
+        lkjnbv
+        <div class="box">zdfgh</div>
+        <div class="box">ss</div>
+        <div class="box">ss</div>
+        <div class="box">ss</div>
+    </div>
+
+    <h2>display-inline-block</h2>
+    <div class="text-1">
+        <ul>
+            <li>home</li>
+            <li>home</li>
+            <li>home</li>
+        </ul>
+    </div>
+    <br><br>
+    <h2>display-inline-block</h2>
+    <div class="text-11">
+        <div class="box-1">A</div>
+        <div class="box-1">B</div>
+        <div class="box-1">C</div>
+        <div class="box-1">D</div>
+    </div>
+
+
+
+</body>
+
+</html>
