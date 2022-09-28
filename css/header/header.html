@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .header-text>ul>li {
+            display: inline-block;
+            padding: 30px 40px;
+        }
+        
+        .justify {
+            justify-content: space-between;
+        }
+        
+        .align-items {
+            align-items: center;
+        }
+        
+        .hide {
+            display: none;
+        }
+        
+        .hovar:hover .hide {
+            padding: 50px 20px;
+            background-color: antiquewhite;
+            line-height: 40px;
+            margin-top: 1rem;
+            display: block;
+            position: absolute;
+        }
+        
+        header {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row justify align-items">
+                <div class="col">
+                    <div class="logo">
+                        <a href="#">logo</a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="header-text">
+                        <ul>
+                            <li class="hovar"><a href="#">home</a>
+                                <ul class="hide">
+                                    <li><a href="#">kkk</a></li>
+                                    <li><a href="#">kkk</a></li>
+                                    <li><a href="#">kkk</a></li>
+                                    <li><a href="#">kkk</a></li>
+                                </ul>
+
+                            </li>
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">home</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="surch">
+                        <input type="text">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+</body>
+
+</html>

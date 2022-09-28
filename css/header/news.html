@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #222;
+        }
+        
+        h3 {
+            text-transform: uppercase;
+        }
+        
+        p {
+            color: #555;
+            font-family: sans-serif;
+        }
+        
+        .wrap:before {
+            background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+            content: '';
+            width: 100%;
+            height: 10%;
+            top: 0;
+            left: 0;
+            z-index: 9;
+            position: Absolute;
+        }
+        
+        .wrap:after {
+            background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+            content: '';
+            width: 100%;
+            height: 10%;
+            bottom: 0;
+            left: 0;
+            position: Absolute;
+        }
+        
+        .wrap {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            color: #666;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            position: absolute;
+            padding: 40px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 20px 20px 110px #000;
+        }
+        
+        .article {
+            padding: 0 40px;
+            animation: up 15s linear infinite;
+            height: 100%;
+        }
+        
+        @keyframes up {
+            0% {
+                transform: translateX(200%);
+                opacity: 1;
+            }
+            99% {
+                transform: translateX(-570%);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(600%, 0%);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="article">
+            <h3>Article 1</h3>
+            <p>Hello i am a text,Hello i am a text</p>
+        </div>
+        <div class="article">
+            <h3>Article 2</h3>
+            <p>Hello i am a text,Hello i am a text</p>
+        </div>
+        <div class="article">
+            <h3>Article 3</h3>
+            <p>Hello i am a text,Hello i am a text</p>
+        </div>
+        <div class="article">
+            <h3>Article 4</h3>
+            <p>Hello i am a text,Hello i am a text</p>
+        </div>
+        <div class="article">
+            <h3>Article 4</h3>
+            <p>Hello i am a text,Hello i am a text</p>
+        </div>
+        <div class="article">
+            <h3>Article 4</h3>
+            <p>Hello i am a text,Hello i am a text</p>
+        </div>
+        <div class="article">
+            <h3>Article 4</h3>
+            <p>Hello i am a text,Hello i am a text</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

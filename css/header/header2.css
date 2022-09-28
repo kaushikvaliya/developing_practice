@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify {
+    justify-content: space-between;
+}
+
+.align-item {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* header */
+
+#bg {
+    background-color: rgb(128, 11, 11);
+    padding: 20px 0;
+}
+
+.logo {
+    color: yellow;
+}
+
+.header-text ul li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.header-text a {
+    font-weight: bold;
+    font-size: 25px;
+    color: #fff;
+}
+
+.header-text ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: yellow;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    margin-top: 4px;
+}
+
+.header-text ul li:hover::after {
+    width: 100%;
+}
+
+.search input {
+    padding: 20px 50px 20px 20px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+}
+
+.search button {
+    padding: 20px 40px;
+    border-radius: 0 10px 10px 0;
+    margin-left: -5px;
+    border: none;
+}
+
+#bg2 {
+    background-color: rgb(236, 240, 238);
+    padding: 20px 0;
+}
+
+.header-text2 ul li {
+    display: inline-block;
+    padding: 0 10px;
+    border: 1px solid rgba(165, 42, 42, 0.765);
+    background-color: rgba(229, 18, 18, 0.463);
+    border-radius: 8px;
+    /* border-color: none; */
+}
+
+.header-text2 a {
+    font-size: 25px;
+    color: #fff;
+    padding: 0 5px;
+}
+
+.header-text2 ul li:hover {
+    background: -webkit-linear-gradient(250deg, #FDFC47, #24FE41);
+    color: #fff;
+}
+
+.the {
+    padding: 30px 0;
+}
+
+.the p u {
+    color: crimson;
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+
+.Fixed {
+    font-size: 30px;
+}
+
+.slider1 {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.calendar {
+    padding: 19px 0;
+    font-size: 20px;
+}
+
+.calendar i {
+    color: crimson;
+}
+
+.box11 {
+    border: none;
+    width: 70%;
+    margin: 20px 0;
+    padding: 0 10px 20px 10px;
+    background-color: rgba(209, 219, 219, 0.299);
+    border-radius: 10px;
+}
+
+.twitter {
+    font-size: 20px;
+}
+
+.twitter i {
+    color: cornflowerblue;
+}
+
+.paragraph p {
+    width: 80%;
+    font-size: 26px;
+    line-height: 39px;
+}
+
+.span {
+    color: red;
+}
