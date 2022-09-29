@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> table css</title>
+    <style>
+        table {
+            text-align: center;
+            width: 600px;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            border: 2px solid #000;
+            padding: 5px;
+        }
+        
+        thead>tr:nth-child(1) {
+            background-color: rgb(212, 139, 43);
+        }
+        /* tbody>tr:nth-child(3n+2) {
+            background-color: blue;
+        } */
+        
+        tbody>tr:nth-child(even) {
+            background-color: rgba(17, 17, 17, 0.703);
+            color: white;
+        }
+        /* tbody>tr:nth-child(even) {
+            background-color: rgba(69, 151, 169, 0.569);
+            color: rgb(36, 26, 218);
+        } */
+        /* caption {
+            caption-side: top;
+        } */
+        
+        tr:hover {
+            background-color: gold;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>css table property</caption>
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+            </tr>
+            <tr>
+                <td>Ernst Handel</td>
+                <td>Roland Mendel</td>
+                <td>Austria</td>
+            </tr>
+            <tr>
+                <td>Island Trading</td>
+                <td>Helen Bennett</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>Laughing Bacchus Winecellars</td>
+                <td>Yoshi Tannamuri</td>
+                <td>Canada</td>
+            </tr>
+            <tr>
+                <td>Magazzini Alimentari Riuniti</td>
+                <td>Giovanni Rovelli</td>
+                <td>Italy</td>
+            </tr>
+            <tr>
+                <td>Laughing Bacchus Winecellars</td>
+                <td>Yoshi Tannamuri</td>
+                <td>Canada</td>
+            </tr>
+            <tr>
+                <td>Magazzini Alimentari Riuniti</td>
+                <td>Giovanni Rovelli</td>
+                <td>Italy</td>
+            </tr>
+            <tr>
+                <td>Laughing Bacchus Winecellars</td>
+                <td>Yoshi Tannamuri</td>
+                <td>Canada</td>
+            </tr>
+            <tr>
+                <td>Magazzini Alimentari Riuniti</td>
+                <td>Giovanni Rovelli</td>
+                <td>Italy</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
