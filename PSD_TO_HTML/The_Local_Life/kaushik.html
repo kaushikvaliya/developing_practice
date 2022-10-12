@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Local Life</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .search-box {
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+        }
+        
+        .input-search {
+            height: 50px;
+            width: 50px;
+            border-style: none;
+            padding: 10px;
+            font-size: 18px;
+            letter-spacing: 2px;
+            outline: none;
+            transition: all .5s ease-in-out;
+            padding-right: 40px;
+            color: #206b4f;
+            background-color: transparent;
+        }
+        
+        .input-search::placeholder {
+            color: #206b4f;
+            font-size: 18px;
+            letter-spacing: 2px;
+            font-weight: 100;
+        }
+        
+        .btn-search {
+            width: 50px;
+            height: 50px;
+            border-style: none;
+            font-size: 20px;
+            font-weight: bold;
+            outline: none;
+            cursor: pointer;
+            border-radius: 50%;
+            position: absolute;
+            right: 0px;
+            color: #206b4f;
+            background-color: transparent;
+            pointer-events: painted;
+        }
+        
+        .btn-search:focus~.input-search {
+            width: 300px;
+            border-radius: 0px;
+            background-color: transparent;
+            border-bottom: 1px solid rgba(255, 255, 255, .5);
+            transition: all 500ms cubic-bezier(0, 0.100, 0.35, 2);
+        }
+        
+        .input-search:focus {
+            width: 300px;
+            border-radius: 0px;
+            background-color: transparent;
+            border-bottom: 1px solid rgba(21, 18, 18, 0.5);
+            transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="color">
+        <div class="container">
+            <div class="row justify-content align-items">
+                <div class="col">
+                    <div class="logo">
+                        <a href="#">
+                            <p>THE LOCAL LIFE</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="header-text">
+                        <ul>
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <div class="icon">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="search-box">
+                                        <button class="btn-search"><i class="fas fa-search"></i></button>
+                                        <input type="text" class="input-search" placeholder="Type to Search...">
+                                    </div>
+                                </a>
+                            </li>
+                            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line"></div>
+
+
+        <div class="container ppp">
+            <div class="row align-items">
+                <div class="col-30">
+                    <div class="img">
+                        <img src="img/Place Your Image Here (Double Click to Edit).png" alt="">
+                    </div>
+                </div>
+                <div class="col-70">
+                    <div class="header-text2">
+                        <p>SUPPORT LOCAL:</p>
+                        <h1>From our farms to your kitchen.</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p>
+                        <button>SHOP NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- -----------section 1---------  -->
+
+    <section class="se1-color">
+        <div class="container">
+            <div class="row">
+                <div class="col-100">
+                    <div class="se1-hedging">
+                        <p>READY FOR</p>
+                        <h4>WHAT’S NEW?</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-33">
+                    <div class="se1-img-text">
+                        <img src="img/Place Your Image Here (Double Click to Edit) (1).png" alt="">
+                        <p>GREEN VEGETABLES PACK $12.99 </p>
+                    </div>
+
+                </div>
+                <div class="col-33">
+                    <div class="se1-img-text">
+                        <img src="img/Place Your Image Here (Double Click to Edit) (2).png" alt="">
+                        <p>GREEN VEGETABLES PACK $12.99 </p>
+                    </div>
+                </div>
+
+                <div class="col-33">
+                    <div class="se1-img-text">
+                        <img src="img/Place Your Image Here (Double Click to Edit) (3).png" alt="">
+                        <p>GREEN VEGETABLES PACK $12.99 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-100">
+                    <div class="dote">
+                        <ul>
+                            <li><i class="fa-solid fa-circle"></i></li>
+                            <li><i class="fa-solid fa-circle"></i></li>
+                            <li><i class="fa-solid fa-circle"></i></li>
+                            <li><i class="fa-solid fa-circle"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -----------section 2---------  -->
+
+    <section class="se2">
+        <div class="max-width se2-color">
+            <div class="container">
+                <div class="row align-items">
+                    <div class="col-50">
+                        <div class="se2-text">
+                            <h4>SUPPORT OUR FARMERS</h4>
+                            <h2>Shop Local: Our Cause</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi adipisci, quos, officiis eveniet voluptatem omnis iste voluptatibus quasi.</p>
+                            <button>OUR PROMISE</button>
+                        </div>
+                    </div>
+                    <div class="col-50">
+                        <div class="se2-img">
+                            <img src="img/Place Your Image Here (Double Click to Edit) (4).png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -----------section 3---------  -->
+
+    <section class="se3-color">
+        <div class="max-width">
+            <div class="row align-items">
+                <div class="col-50">
+                    <div class="se3-img">
+                        <img src="img/Place Your Image Here (Double Click to Edit) (5).png" alt="">
+                    </div>
+
+                </div>
+                <div class="col-50">
+                    <div class="se3-text">
+                        <h4>Newly Harvest</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deserunt, reprehenderit ad accusamus doloremque aliquid esse suscipit omnis dolor sit qui repudiandae eligendi. Facilis aspernatur impedit atque!</p>
+                        <button>OUR PRODUCTS</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items">
+                <div class="col-50">
+                    <div class="se3-text">
+                        <h4>Fresh Daily Products</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deserunt, reprehenderit ad accusamus doloremque aliquid esse suscipit omnis dolor sit qui repudiandae eligendi. Facilis aspernatur impedit atque!</p>
+                        <button>SHOP TODAY</button>
+                    </div>
+                </div>
+                <div class="col-50">
+                    <div class="se3-img">
+                        <img src="img/Place Your Image Here (Double Click to Edit) (6).png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -----------section 4---------  -->
+
+    <section class="se4-bg-color">
+        <div class="container">
+            <div class="row">
+                <div class="col-100">
+                    <div class="se4-hedging">
+                        <h4>Testimonials</h4>
+                        <p>WHY CUSTOMERS LOVE US</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-50">
+                    <div class="se4-img-text">
+                        <img src="img/Place Your Image Here (Double Click to Edit) (7).png" alt="">
+                        <h5>CLIENT NAME</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                    </div>
+
+                </div>
+                <div class="col-50">
+                    <div class="se4-img-text">
+                        <img src="img/Place Your Image Here (Double Click to Edit) (8).png" alt="">
+                        <h5>CLIENT NAME</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-50">
+                    <div style="padding: 50px 0;" class="se4-img-text">
+                        <img src="img/Place Your Image Here (Double Click to Edit) (9).png" alt="">
+                        <h5>CLIENT NAME</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                    </div>
+                </div>
+
+                <div class="col-50">
+                    <div style="padding: 50px 0;" class="se4-img-text">
+                        <img src="img/Place Your Image Here (Double Click to Edit) (10).png" alt="">
+                        <h5>CLIENT NAME</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- -----------section 5---------  -->
+
+    <section class="se5-bg-color">
+        <div class="container">
+            <div class="row">
+                <div class="col-100">
+                    <div class="se5-hedging">
+                        <p>Our Local Farms</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-50">
+                    <div class="se5-img-text">
+                        <img src="img/Place Your Image Here (Double Click to Edit) (11).png" alt="">
+                        <h4>SAN ISIDRO, HAMPTON, COUNTRY</h4>
+                        <p>Lorem ipsum dolor sit amet, kaushik consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                    </div>
+                </div>
+                <div class="col-50">
+                    <div class="se5-img-text">
+                        <img src="img/Place Your Image Here (Double Click to Edit) (12).png" alt="">
+                        <h4>SAN ISIDRO, HAMPTON, COUNTRY</h4>
+                        <p>Lorem ipsum dolor sit amet, kaushik consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-50">
+                    <div class="se5-img-text">
+                        <img src="img/Place Your Image Here (Double Click to Edit) (13).png" alt="">
+                        <h4>SAN ISIDRO, HAMPTON, COUNTRY</h4>
+                        <p>Lorem ipsum dolor sit amet, kaushik consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                    </div>
+                </div>
+                <div class="col-50">
+                    <div class="se5-img-text">
+                        <img src="img/Place Your Image Here (Double Click to Edit) (14).png" alt="">
+                        <h4>SAN ISIDRO, HAMPTON, COUNTRY</h4>
+                        <p>Lorem ipsum dolor sit amet, kaushik consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-100">
+                    <div class="se5-btn">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ----------- footer ---------  -->
+
+    <footer class="foot-bg-color">
+        <div class="container">
+            <div class="row">
+                <div class="col-25">
+                    <div class="foot-text1">
+                        <p>LOCAL LIFE</p>
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-2x fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-2x fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-2x fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-25">
+                    <div class="foot-text2">
+                        <h4>OUR SERVICES</h4>
+                        <ul>
+                            <li><a href="#">  What’s New</a></li>
+                            <li><a href="#">How to Order</a></li>
+                            <li><a href="#">Payment Method</a></li>
+                            <li><a href="#">Order Status</a></li>
+                            <li><a href="#">Subscription</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-25">
+                    <div class="foot-text2">
+                        <h4>OUR SERVICES</h4>
+                        <ul>
+                            <li><a href="#">Our Local Farms</a></li>
+                            <li><a href="#">Craftsmanship</a></li>
+                            <li><a href="#">Our Sources</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <div class="col-25">
+                    <div class="foot-text2">
+                        <h4>OUR SERVICES</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Our Promise</a></li>
+                            <li><a href="#">More Information</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-100">
+                    <div class="Copyright">
+                        <p>Copyright 2021 The Local Life Co. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
