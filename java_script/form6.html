@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 6</title>
+    <style>
+        body {
+            background-color: bisque;
+        }
+        
+        table {
+            border: 1px dashed black;
+            background-color: honeydew;
+            /* align-items: center; */
+        }
+        
+        span {
+            text-transform: capitalize;
+            color: red;
+        }
+        
+        table caption {
+            font-size: 25px;
+            text-transform: capitalize;
+            margin: 0 0 20px 0;
+        }
+        
+        table tr td:nth-child(1) {
+            font-size: 20px;
+            font-weight: bolder;
+            text-transform: capitalize;
+            padding: 10px 0 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form method="post" autocomplete="off">
+        <table align="center" cellpadding="10">
+            <caption> <u>Student Registeration Form Using Table in HTML</u></caption>
+            <tr class="form-control">
+                <td>
+                    <Label for="fname"> First name :</Label>
+                </td>
+                <td><input type="text" id="fname" placeholder="Raj" name="username" autofocus required onblur="nan(this, 'unameError',  '* this is username required')">&nbsp;&nbsp;</td>
+                <td> <span id="unameError"></span></td>
+            </tr>
+            <tr class="form-control">
+                <td>
+                    <Label for="lname"> Last name :</Label>
+                </td>
+                <td><input type="text" id="lname" placeholder="yadav" onblur="nan(this, 'lnameError',  '* this is lastname required')">&nbsp;&nbsp;</td>
+                <td><span id="lnameError"></span> </td>
+            </tr>
+            <tr>
+                <td> <label for="email">Email id :</label></td>
+                <td><input type="email" id="email" placeholder="rajyadav@gmail.com" onkeypress="checkemail(this)" onblur="nan(this, 'emailError',  '* this is email required')"></td>
+                <td><span id="emailError"></span> </td>
+            </tr>
+            <tr>
+                <td><label for="number">Mobile number :</label></td>
+                <td> <input type="tel" onkeypress="return(event.which >=48 && event.which <=57)" id="number" placeholder="7658XXXXXX" maxlength="10" minlength="10" onblur="nan(this, 'telError',  '* this is Mobile number required')"></td>
+                <td><span id="telError"></span></td>
+            </tr>
+            <td>Gender :</td>
+            <td>
+                <input type="radio" id="male" name="gender"><label for="male">Male</label>
+                <input type="radio" id="female" name="gender"><label for="female">Female</label>
+            </td>
+            <td><span id="radioError"></span></td>
+            </tr>
+
+            <tr>
+                <td><label for="date">BirthDate :</label></td>
+                <td>
+                    <!-- <input type="date" id="date" onkeyup="checkDate(this, 'dateerror')"> -->
+                    <input type="text" name="date" id="date" placeholder="DD/MM/YYYY" onkeyup="checkDate(this, 'dateerror' )" onblur="nan(this, 'dateerror',  '* this is BirthDate required')" />
+                </td>
+                <td><span id="dateerror"></span></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address :</label></td>
+                <td> <textarea cols="20" rows="5" id="address" onblur="nan(this, 'addresserror',  '* this is address required')"></textarea> </td>
+                <td><span id="addresserror"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <lable for="city">City :</lable>
+                </td>
+                <td><input type="text" id="city" placeholder="surat" maxlength="20" onkeypress="return(event.which >=65 && event.which <= 90  ||  event.which >=97 && event.which <= 122)" onblur="nan(this, 'cityerror',  '* this is city required')"></td>
+                <td> <span id="cityerror"></span></td>
+            </tr>
+            <tr>
+                <td><label for="pin">Pin Code :</label></td>
+                <td><input type="text" id="pin" placeholder="566502" maxlength="6" onkeypress="return(event.which >=48 && event.which <=57)" onblur="nan(this, 'pinerror',  '* this is pin code required')"></td>
+                <td><span id="pinerror"></span> </td>
+            </tr>
+            <tr>
+                <td><label for="state">State :</label></td>
+                <td><input type="text" id="state" placeholder="gujrat" maxlength="50" onkeypress="return(event.which >=65 && event.which <= 90  ||  event.which >=97 && event.which <= 122)" onblur="nan(this, 'stateerror',  '* this is State required')">
+                </td>
+                <td><span id="stateerror"></span> </td>
+            </tr>
+
+            <tr>
+                <td><label for="country">country :</label></td>
+                <td><input type="text" id="country" placeholder="india" onkeypress="return(event.which >=65 && event.which <= 90  ||  event.which >=97 && event.which <= 122)" onblur="nan(this, 'countryerror',  '* this is State required')"></td>
+                <td><span id="countryerror"></span></td>
+
+            </tr>
+            <tr>
+                <td>Hobbies :</td>
+                <td colspan="2">
+                    <input type="checkbox" value="Drawing" id="Drawing"><label for="Drawing">Drawing</label>
+                    <input type="checkbox" value="singing" id="singing"><label for="singing">Singing</label>
+                    <input type="checkbox" value="Dancing" id="Dancing"><label for="Dancing">Dancing</label>
+                    <input type="checkbox" value="Sketching" id="Sketching"><label for="Sketching">Sketching</label>
+                    <input type="checkbox" value="Other" id="Other"><label for="Other">Other</label><br>
+                    <input type="text" value="" id="otherex" maxlength="20" placeholder="ex. teaching">
+
+                </td>
+            </tr>
+            <tr>
+                <td> Qualification :</td>
+                <td>
+                    <select>
+                        <option value="10th">10th</option>
+                        <option value="12th">12th</option>
+                        <option value="Graduation">Graduation</option>
+                        <option value="Post Graduation">Post Graduation</option>
+                        <option value="PHD">PHD</option>
+                    </select>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Courses Applied for :</td>
+                <td>
+                    <input type="checkbox" value="BCA" id="BCA"><label for="BCA">BCA</label><br>
+                    <input type="checkbox" value="B.com" id="B.com"><label for="B.com">B.com</label><br>
+                    <input type="checkbox" value="B.sc" id="B.sc"><label for="B.sc">B.sc</label><br>
+                    <input type="checkbox" value="BA" id="BA"><label for="BA">BA</label><br>
+                    <input type="checkbox" value="MCA" id="MCA"><label for="MCA">MCA</label><br>
+                    <input type="checkbox" value="M.com" id="M.com"><label for="M.com">M.com</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <input type="submit" onclick="btnclick()"> &nbsp;
+                    <input type="reset">
+                </td>
+            </tr>
+            <p id="ptrg"></p>
+        </table>
+
+    </form>
+
+    <script>
+        function btnclick() {
+            // var fname = document.getElementById("fname").value;
+            // var lname = document.getElementById("lname").value;
+            // var email = document.getElementById("email").value;
+            // var number = document.getElementById("number").value;
+            // var address = document.getElementById("address").value;
+            // var pin = document.getElementById("pin").value;
+            // var state = document.getElementById("state").value;
+            // var country = document.getElementById("country").value;
+            // var city = document.getElementById("city").value;
+
+
+            // if (fname == "") {
+            //     event.preventDefault();
+            //     document.getElementById("unameError").innerHTML = "This field is required";
+            // } else if (fname == " ") {
+            //     document.getElementById("unameError").innerHTML = "";
+            // }
+
+            // if (lname == "") {
+            //     event.preventDefault();
+            //     document.getElementById("lnameError").innerHTML = "This field is required";
+            // } else if (lname == " ") {
+            //     document.getElementById("lnameError").innerHTML = "";
+
+            // }
+            // if (email == "") {
+            //     event.preventDefault();
+            //     document.getElementById("emailError").innerHTML = "This field is required";
+            // } else if (email == " ") {
+            //     document.getElementById("emailError").innerHTML = "";
+
+            // }
+            // if (number == "") {
+            //     event.preventDefault();
+            //     document.getElementById("telError").innerHTML = "This field is required";
+            // } else if (number == " ") {
+            //     document.getElementById("telError").innerHTML = "";
+            // }
+
+
+            // var kaushik;
+
+            var spanid = ["unameError", "lnameError", "emailError", "telError", "dateerror", "addresserror", "pinerror", "stateerror", "countryerror", "cityerror"];
+
+
+            var fill = [document.getElementById("fname"), document.getElementById("lname"), document.getElementById("email"), document.getElementById("number"), document.getElementById("date"), document.getElementById("address"), document.getElementById("pin"), document.getElementById("state"), document.getElementById("country"), document.getElementById("city")];
+
+            for (let index = 0; index < fill.length; index++) {
+                if (fill[index].value == "") {
+                    event.preventDefault();
+                    document.getElementById(spanid[index]).innerHTML = "This field is required";
+                } else if (fill[index].value == " ") {
+                    event.preventDefault();
+                    document.getElementById(spanid[index]).innerHTML = "";
+
+                }
+
+            }
+
+
+
+
+            // if (fname == "" || lname == "" || email == "" || number == "" || address == "" || pin == "" || state == "" || country == "" || city == "") {
+            //     event.preventDefault();
+            //     document.getElementById("unameError").innerHTML = "This field is required";
+            //     document.getElementById("lnameError").innerHTML = "This field is required";
+            //     document.getElementById("emailError").innerHTML = "This field is required";
+            //     document.getElementById("telError").innerHTML = "This field is required";
+            //     document.getElementById("addresserror").innerHTML = "This field is required";
+            //     document.getElementById("pinerror").innerHTML = "This field is required";
+            //     document.getElementById("stateerror").innerHTML = "This field is required";
+            //     document.getElementById("countryerror").innerHTML = "This field is required";
+            //     document.getElementById("cityerror").innerHTML = "This field is required";
+            // } else {
+            //     document.getElementById("unameError").innerHTML = " ";
+            // }
+
+        }
+
+        function setErrorFor(input, message) {
+            let formControl = input.parentElement;
+            formControl.className = "form-control error";
+            let small = formControl.querySelector("span");
+            span.innerText = message;
+        }
+        // form.addEventListener("submit", (e) => {
+        //     e.preventDefault();
+        //     handleInput();
+        // });
+
+        // input check function
+
+        function nan(e, unameError, required) {
+            if (e.value == "") {
+
+                // document.getElementById(unameError).innerHTML = "<b>This field is required</b>";
+                document.getElementById(unameError).innerHTML = required;
+                document.getElementById(unameError).style.color = "red";
+            } else {
+                document.getElementById(unameError).innerHTML = "";
+
+            }
+        }
+
+
+
+
+        // email check function
+
+        function checkemail(e) {
+            RegEx = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; // alpha only 
+            console.log(RegEx.test(e.value))
+            if (RegEx.test(e.value)) {
+                document.getElementById("emailError").innerHTML = ""
+
+            } else {
+                document.getElementById("emailError").innerText = "invalid email  "
+
+            }
+
+        }
+
+
+        // date check function
+
+        function isFutureDate(idate) {
+            var today = new Date().getTime(),
+                idate = idate.split("/");
+
+            idate = new Date(idate[2], idate[1] - 1, idate[0]).getTime();
+            return (today - idate) < 0 ? true : false;
+        }
+
+        // your function
+        function checkDate(e, datewarn) {
+            dateReg = /(0[1-9]|[12][0-9]|3[01])[\/](0[1-9]|1[012])[\/](18|19|20)\d\d/;
+
+            if (dateReg.test(e.value)) {
+                if (isFutureDate(e.value)) {
+                    document.getElementById(datewarn).innerHTML = "Entered date is a future date";
+                    document.getElementById(datewarn).style.color = "red";
+                } else {
+                    document.getElementById(datewarn).innerHTML = "It's a valid date";
+                    document.getElementById(datewarn).style.color = "green";
+                }
+            } else {
+                document.getElementById(datewarn).innerHTML = "Invalid date!";
+                document.getElementById(datewarn).style.color = "red";
+            }
+        }
+
+
+
+        // function btnclick() {
+        //     // var a = function nan(e, unameError, required) {
+        //     //     if (e.value == "") {
+
+        //     //         // document.getElementById(unameError).innerHTML = "<b>This field is required</b>";
+        //     //         document.getElementById(unameError).innerHTML = required;
+        //     //         document.getElementById(unameError).style.color = "red";
+        //     //     } else {
+        //     //         document.getElementById(unameError).innerHTML = "";
+
+        //     //     }
+        //     // }
+
+        //     // function nan(e, unameError, required) {
+        //     //     if (e.value == "") {
+
+        //     //         // document.getElementById(unameError).innerHTML = "<b>This field is required</b>";
+        //     //         document.getElementById(unameError).innerHTML = required;
+        //     //         document.getElementById(unameError).style.color = "red";
+        //     //     } else {
+        //     //         document.getElementById(unameError).innerHTML = "";
+
+        //     //     }
+        //     // }
+
+        // }
+    </script>
+
+</body>
+
+</html>

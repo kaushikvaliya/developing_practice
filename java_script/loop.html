@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // for loop 
+        for (let index = 1; index <= 10; index++) {
+            console.log("for loop = " + index);
+
+        }
+
+        // for in loop 
+
+        const data = {
+            "kaushik": 90,
+            "vivek": 99,
+            "ketan": 89
+        };
+
+        for (const key in data) {
+            console.log(key);
+            console.log(data[key]);
+        }
+
+        // for of loop 
+
+        const array = ["Test", "something", 123, 12.123, ]
+
+        for (const iterator of array) {
+            console.log("iterator for of", iterator);
+
+        }
+
+        // forEach loop 
+
+        array.forEach(element => {
+            console.log(element);
+        });
+
+
+
+
+
+        // while loop 
+
+        // var num = 1;
+        // while (num <= 10) {
+        //     console.log("while loop = " + num);
+        //     num++;
+
+        // }
+
+
+        // do while loop
+
+        // var num1 = 50;
+        // do {
+        //     console.log("do while loop = " + num1);
+
+
+        // } while (num1 <= 10);
+    </script>
+
+</body>
+
+</html>

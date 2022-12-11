@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .purple-border textarea {
+            border: 1px solid #ba68c8;
+        }
+        
+        .purple-border .form-control:focus {
+            border: 1px solid #ba68c8;
+            box-shadow: 0 0 0 0.2rem rgba(186, 104, 200, .25);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn btn-primary" id="copyID" style="margin-left: 280px;">
+      <i class="fa fa-copy"></i>
+    </button>
+    <textarea class="form-control" id="textareainput" rows="5" cols="20">Text area input</textarea>
+    </div>
+    <script>
+        var button = document.getElementById("copyID"),
+            input = document.getElementById("textareainput");
+        button.addEventListener("click", function(event) {
+            event.preventDefault();
+            input.select();
+            document.execCommand("copy");
+        });
+    </script>
+</body>
+
+</html>

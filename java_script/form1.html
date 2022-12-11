@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .custom-field {
+            position: relative;
+            border-top: 20px solid transparent;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+        
+        .custom-field input {
+            padding: 12px;
+            border: none;
+            background: #f2f2f2;
+            padding: 12px;
+            border-radius: 3px;
+            width: 250px;
+            outline: none;
+            font-size: 14px;
+        }
+        
+        .custom-field .placeholder {
+            position: absolute;
+            left: 14px;
+            overflow: hidden;
+            top: 22px;
+            line-height: 100%;
+            transform: translateY(-50%);
+            color: #aaa;
+            transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+        }
+        
+        .placeholder {
+            font-size: 16px;
+        }
+        
+        .custom-field.one input {
+            background: none;
+            border: 2px solid #ddd;
+            transition: border-color 0.3s ease;
+        }
+        
+        .custom-field.one input:not(:placeholder-shown)+.placeholder,
+        .custom-field.one input:focus+.placeholder {
+            top: 0;
+            font-size: 16px;
+            color: #222;
+            background: #fff;
+            width: auto
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="">
+
+        <label class="custom-field one">
+            <input type="text" placeholder=" "/>
+            <span class="placeholder">Enter Text</span>
+        </label>
+    </form>
+
+
+</body>
+
+</html>

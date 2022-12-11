@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Password airtel -->
+    <!-- air80123 -->
+    <!-- Tops student 5g -->
+    <!-- Tops**@43210 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .main {
+            width: 70%;
+            height: 490px;
+            margin: 45px auto;
+            box-shadow: 0px 8px 24px rgba(33, 30, 8, 0.164);
+            /* box-shadow: 0px 0px 5px gray; */
+            position: relative;
+            /* overflow: hidden; */
+        }
+        
+        .main img {
+            width: 100%;
+            display: block;
+        }
+        
+        .slids {
+            position: absolute;
+            transition: 2s;
+        }
+        
+        .btn {
+            text-align: center;
+        }
+        
+        .btn button {
+            padding: 5px 8px;
+            /* bottom: ; */
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="main">
+            <img src="https://picsum.photos/id/231/700/400" alt="" class="slids">
+            <img src="https://picsum.photos/id/232/700/400" alt="" class="slids">
+            <img src="https://picsum.photos/id/233/700/400" alt="" class="slids">
+            <img src="https://picsum.photos/id/234/700/400" alt="" class="slids">
+            <img src="https://picsum.photos/id/235/700/400" alt="" class="slids">
+        </div>
+    </main>
+
+    <div class="btn">
+        <button onclick="prv(-1)"> prv </button>
+        <button onclick="next(1)"> next </button>
+    </div>
+
+    <script>
+        const slids = document.querySelectorAll(".slids");
+        var count = 0;
+
+        slids.forEach(
+            (slids, index) => {
+                // console.log(slids);
+                slids.style.left = ` ${index * 100}% `
+            }
+        );
+
+        function next(n) {
+            count += n;
+            sladimg();
+            // console.log(count);
+
+        }
+
+        function prv(n) {
+            count += n;
+            sladimg();
+            // console.log(count);
+        }
+
+
+
+        function sladimg() {
+
+            if (count > slids.length - 1) {
+                count = 0;
+            }
+
+            if (count < 0) {
+                count = slids.length - 1;
+            }
+
+            slids.forEach(
+                (slids) => {
+                    slids.style.transform = `translateX(-${count * 100}%) `
+                }
+            );
+
+        }
+
+
+        var autoplay = true;
+        var autoplayInterval = 4000;
+
+        if (autoplay) {
+            setInterval(function() {
+                newIndex++;
+                sladimg();
+            }, autoplayInterval);
+        }
+        sladimg();
+
+        // setInterval(kkkk, 1000);
+    </script>
+</body>
+
+</html>

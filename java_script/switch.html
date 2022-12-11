@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Enter the First number : <input id="first_number">
+    <br> <br> Enter the Second number: <input id="second_number">
+    <br> <br> select :
+
+    <select name="op" id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+        <option value="=">=</option>
+
+    </select>
+    <br> <br>
+    <button onclick="calculator()">answer</button>
+    <input id="answer">
+
+
+    <script>
+        function calculator() {
+
+            const first_number = parseFloat(document.getElementById("first_number").value);
+            const second_number = parseFloat(document.getElementById("second_number").value);
+            const sybol = document.getElementById("op").value;
+
+
+            switch (sybol) {
+                case '+':
+                    document.getElementById("answer").value = first_number + second_number;
+                    break;
+                case '-':
+                    document.getElementById("answer").value = first_number - second_number;
+                    break;
+                case '/':
+                    document.getElementById("answer").value = first_number / second_number;
+                    break;
+                case '*':
+                    document.getElementById("answer").value = first_number * second_number;
+                    break;
+            }
+
+            // if (sybol == "+") {
+            //     document.getElementById("answer").value = first_number + second_number;
+            // } else
+            // if (sybol == "-") {
+            //     document.getElementById("answer").value = first_number - second_number;
+            // } else
+            // if (sybol == "*") {
+            //     document.getElementById("answer").value = first_number * second_number;
+            // } else
+            //     document.getElementById("answer").value = first_number / second_number;
+
+        }
+    </script>
+
+    <script>
+        var a = 5;
+
+        for (let i = 1; i <= 10; i++) {
+            console.log(a, "* ", i, " = ", a * i);
+
+        }
+    </script>
+</body>
+
+</html>

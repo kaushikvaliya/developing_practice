@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+
+    <style>
+        body {
+            background: #e6e6e6;
+        }
+        
+        #slider {
+            width: 80%;
+            margin: 0 auto;
+            position: relative;
+            /* overflow: hidden; */
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.4);
+        }
+        
+        .slide {
+            width: 100%;
+            display: none;
+            animation-name: fade;
+            animation-duration: 3s;
+        }
+        
+        img {
+            width: 100%;
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: 0.5;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            padding: 15px 10px;
+            border-radius: 5px;
+        }
+        
+        .controls:hover {
+            background: white;
+            transition: 0.3s;
+        }
+        
+        .controls:active {
+            color: grey;
+        }
+        
+        #left-arrow {
+            left: 10px;
+        }
+        
+        #right-arrow {
+            right: 10px;
+        }
+        
+        #dots-con {
+            text-align: center;
+        }
+        
+        .dot {
+            display: inline-block;
+            background: grey;
+            padding: 8px;
+            border-radius: 50%;
+            margin: 10px 5px;
+        }
+        
+        .active {
+            background: crimson;
+        }
+        
+        @media (max-width:576px) {
+            #slider {
+                width: 100%;
+            }
+            .controls {
+                font-size: 1em;
+            }
+            #dots-con {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+
+    <!--Slider-->
+    <div id="slider">
+        <div class="slide" style="background:dodgerBlue;">
+            <img src="https://img.fotocommunity.com/peacefull-95e65145-d050-4957-9ddc-85dd60689d45.jpg?height=500">
+        </div>
+
+        <div class="slide" style="background:coral;">
+            <img src="https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/2/sunset-storm-haystack-rock-canon-beach-oregon-coast-tl-mair.jpg">
+        </div>
+
+        <div class="slide" style="background:crimson;">
+            <img src=" https://render.fineartamerica.com/images/images-profile-flow/400/images-medium-large-5/1-tourists-at-eiffel-tower-paris-panoramic-images.jpg">
+        </div>
+
+        <div class="slide" style="background: #6edf10;">
+            <img src="https://dmasia.travel/wp-content/uploads/2019/09/vit3-1000x350.jpg">
+        </div>
+
+        <!--Controlling arrows-->
+        <span class="controls" onclick="prevSlide(-1)" id="left-arrow"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+  </span>
+        <span class="controls" id="right-arrow" onclick="nextSlide(1)"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+  </span>
+    </div>
+    <div id="dots-con">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+
+    <script>
+        var slides = document.querySelectorAll(".slide");
+        var dots = document.querySelectorAll(".dot");
+        var index = 0;
+
+
+
+        function prevSlide(n) {
+            index += n;
+            console.log("prevSlide is called");
+            changeSlide();
+        }
+
+        function nextSlide(n) {
+            index += n;
+            changeSlide();
+            console.log(n);
+        }
+
+        changeSlide();
+
+        function changeSlide() {
+            if (index > slides.length - 1)
+                index = 0;
+
+            if (index < 0) {
+                index = slides.length - 1;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                dots[i].classList.remove("active");
+            }
+            slides[index].style.display = "block";
+            dots[index].classList.add("active");
+
+
+        }
+
+
+        // changeSlide();
+        // setInterval((nextSlide), 2000);
+    </script>
+
+</body>
+
+</html>

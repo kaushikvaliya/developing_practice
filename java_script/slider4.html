@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Autoplay Slider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <style>
+        #example-logo {
+            display: block;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            z-index: 10;
+            width: 120px;
+            padding: 15px 20px;
+            font-family: sans-serif;
+            font-size: 11px;
+            background-color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        #example-logo img {
+            width: 100%;
+            margin-top: 4px
+        }
+    </style>
+    <style>
+        .slider_slide {
+            width: 100%;
+            max-width: 900px;
+            display: none;
+        }
+        
+        .slider_slide:first-child {
+            display: block;
+        }
+        
+        .slider_slide>img {
+            width: 100%
+        }
+        
+        .slider_nav {
+            padding: 15px;
+        }
+        
+        .slider_pagination_btn {
+            display: inline-block;
+            padding: 6px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background-color: transparent;
+        }
+        
+        .slider_pagination_btn:before {
+            content: '';
+            display: inline-block;
+            padding: 6px;
+            border-radius: 100%;
+            background-color: #ccc;
+        }
+        
+        .slider_pagination_btn:hover:before {
+            background-color: #aaa;
+        }
+        
+        .slider_pagination_btn:focus:before {
+            background-color: #777;
+        }
+        
+        .slider_pagination_btn.slider_pagination_btn--sel:before {
+            background-color: black
+        }
+    </style>
+</head>
+
+<body>
+    <p>Wait for 4 seconds in order for the slider to navigate automatically.</p>
+    <div class="slider">
+        <div class="slider_slides-cont">
+            <div class="slider_slide"><img src="https://picsum.photos/id/231/700/400"></div>
+            <div class="slider_slide"><img src="https://picsum.photos/id/232/700/400"></div>
+            <div class="slider_slide"><img src="https://picsum.photos/id/233/700/400"></div>
+        </div>
+        <div class="slider_pagination"></div>
+        <button class="slider_nav">&larr; Previous</button>
+        <button class="slider_nav">Next &rarr;</button>
+    </div>
+    <script>
+        var currentIndex = 0;
+        var newIndex = 0;
+
+        var slideElements = document.getElementsByClassName('slider_slide');
+        var slidesLength = slideElements.length;
+        var paginationElement = document.getElementsByClassName('slider_pagination')[0];
+        var navElements = document.getElementsByClassName("slider_nav");
+
+        function navigateSlider() {
+            if (newIndex === -1) {
+                newIndex = slidesLength - 1;
+            } else if (newIndex === slidesLength) {
+                newIndex = 0;
+            }
+
+            paginationElement.childNodes[currentIndex].classList.remove('slider_pagination_btn--sel');
+            paginationElement.childNodes[newIndex].classList.add('slider_pagination_btn--sel');
+
+            slideElements[currentIndex].style.display = "none";
+            slideElements[newIndex].style.display = "block";
+            currentIndex = newIndex;
+        }
+
+        navElements[0].addEventListener('click', function() {
+            newIndex--;
+            navigateSlider();
+        });
+
+        navElements[1].addEventListener('click', function() {
+            newIndex++;
+            navigateSlider();
+        });
+
+        var paginationHTML = [];
+        for (var i = 0; i < slidesLength; i++) {
+            paginationHTML.push('<button class="slider_pagination_btn" data-index="' + i + '"></button>');
+        }
+        paginationElement.innerHTML = paginationHTML.join('');
+
+        paginationElement.addEventListener('click', function(e) {
+            var target = e.target;
+            if (target.classList.contains("slider_pagination_btn")) {
+                newIndex = Number(target.getAttribute("data-index"));
+                navigateSlider();
+            }
+        });
+
+        var autoplay = true;
+        var autoplayInterval = 4000;
+
+        if (autoplay) {
+            setInterval(function() {
+                newIndex++;
+                navigateSlider();
+            }, autoplayInterval);
+        }
+
+        navigateSlider();
+    </script>
+</body>
+
+</html>

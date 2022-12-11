@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            background: #ecececeb;
+        }
+        
+        .calculator {
+            margin: auto;
+            margin-top: 50px;
+            width: 32%;
+            background-color: #000;
+            overflow: hidden;
+            padding: 20px;
+            border-radius: 15px;
+            border-color: #f5f6fa;
+            box-shadow: 2px 2px 11px 5px rgb(97 89 89 / 50%);
+        }
+        
+        .calculator .brand-name p {
+            margin: 0;
+            font-weight: bold;
+            margin: 0 0 2px 5px;
+            color: #576574;
+            float: left;
+        }
+        
+        .calculator .model-no p {
+            margin: 0;
+            color: #576574;
+            overflow: hidden;
+            float: right;
+            font-size: 14px;
+        }
+        
+        #display {
+            width: 100%;
+            padding: 25px 8px 25px 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-size: 50px;
+            border-radius: 10px;
+            border-color: #fff;
+            box-shadow: 2px 2px 3px 1px rgb(97 89 89 / 50%);
+            text-align: right;
+            outline: none;
+            background-color: #323030;
+            color: #fff;
+        }
+        
+        .calculator .number-pad {
+            margin-top: 20px;
+        }
+        
+        .calculator .number-pad input {
+            width: 22.8%;
+            padding: 12px;
+            font-size: 25px;
+            border-radius: 8px;
+            border-color: #fff;
+            outline: none;
+            margin-left: 5px;
+            box-shadow: 2px 2px 3px 1px rgb(97 89 89 / 50%);
+            color: #2f2524e8;
+            background: #dcdadaf5;
+        }
+        
+        .calculator .number-pad input:hover {
+            background: #d2cdcdf5;
+        }
+        
+        .calculator .number-pad .rows {
+            margin-top: 8px;
+        }
+        
+        .calculator .number-pad #c {
+            background-color: #54a0ff;
+            color: #fff;
+        }
+        
+        .calculator .number-pad #c:hover {
+            background-color: red;
+            color: #fff;
+        }
+        
+        .calculator .number-pad #root {
+            color: #2e86de;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        
+        .calculator .number-pad #backspece {
+            color: #2e86de;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        
+        .calculator .number-pad #divite {
+            color: #2e86de;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        
+        .calculator .number-pad #into {
+            color: #2e86de;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        
+        .calculator .number-pad #minus {
+            color: #2e86de;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        
+        .calculator .number-pad #plus {
+            color: #2e86de;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        
+        .calculator .number-pad #persentise {
+            color: #2e86de;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        
+        .calculator .number-pad #equal {
+            background-color: #54a0ff;
+            font-weight: bold;
+            font-size: 25px;
+            color: #fff;
+        }
+        
+        .calculator .number-pad #equal:hover {
+            background-color: orange;
+        }
+        
+        .calculator .number-pad #equal:focus {
+            background-color: #468ee8;
+        }
+        /* ~=~=~=~=~=~=~=~=~=~=~=~=~=~=~+~=
+    This Code is for Responsive    !
+~=~=~=~=~=~=~=~=~=~=~=~=~=~=~+~= */
+        /*         
+        @media only screen and (min-width: 2560px) {
+            .calculator .number-pad input {
+                width: 22.8%;
+                padding: 26px;
+                font-size: 35px;
+                margin-left: 10px;
+            }
+            #display {
+                padding: 30px 0 30px 0;
+                font-size: 120px;
+            }
+            .calculator {
+                padding: 35px;
+            }
+            .calculator .brand-name p {
+                font-size: 30px;
+            }
+            .calculator .model-no p {
+                font-size: 28px;
+            }
+        }
+        
+        @media only screen and (max-width: 1366px) {
+            .calculator .number-pad input {
+                width: 22.5%;
+            }
+        }
+        
+        @media only screen and (max-width: 1440px) {
+            .calculator .number-pad input {
+                width: 22.5%;
+            }
+        }
+        
+        @media only screen and (max-width: 1024px) {
+            .calculator .number-pad input {
+                width: 21.5%;
+            }
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .calculator {
+                width: 50%;
+            }
+            .calculator .number-pad input {
+                width: 22.5%;
+            }
+        }
+        
+        @media only screen and (max-width: 425px) {
+            .calculator {
+                width: 80%;
+            }
+            .calculator .number-pad input {
+                width: 22.5%;
+            }
+        }
+        
+        @media only screen and (max-width: 375px) {
+            .calculator .number-pad input {
+                width: 21.5%;
+            }
+        } */
+        
+        .kkk {
+            padding: 10px 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <center></center> -->
+    <div class="calculator">
+
+        <div class="display">
+            <input type="text" name="display" id="display" value="" placeholder="0" readonly>
+            <!-- <input class="kkk" id="kaus" type="text"> -->
+        </div>
+        <div class="number-pad">
+            <div class="rows">
+                <input type="button" name="c" id="c" value="C" onclick="clr()">
+                <input type="button" name="root" id="root" value="√" onclick="calculate()" disabled>
+                <input type="button" name="backspece" id="backspece" value="&LeftArrow;" onclick="calculate()" disabled>
+                <input type="button" name="divite" id="divite" value="/" onclick="calculate('/')">
+            </div>
+            <div class="rows">
+                <input type="button" name="7" id="7" value="7" onclick="calculate(7)">
+                <input type="button" name="8" id="8" value="8" onclick="calculate(8)">
+                <input type="button" name="9" id="9" value="9" onclick="calculate(9)">
+                <input type="button" name="into" id="into" value="*" onclick="calculate('*')">
+            </div>
+            <div class="rows">
+                <input type="button" name="4" id="4" value="4" onclick="calculate(4)">
+                <input type="button" name="5" id="5" value="5" onclick="calculate(5)">
+                <input type="button" name="6" id="6" value="6" onclick="calculate(6)">
+                <input type="button" name="minus" id="minus" value="-" onclick="calculate('-')">
+            </div>
+            <div class="rows">
+                <input type="button" name="1" id="1" value="1" onclick="calculate(1)">
+                <input type="button" name="2" id="2" value="2" onclick="calculate(2)">
+                <input type="button" name="3" id="3" value="3" onclick="calculate(3)">
+                <input type="button" name="plus" id="plus" value="+" onclick="calculate('+')">
+            </div>
+            <div class="rows">
+                <input type="button" name="0" id="" value="0" onclick="calculate(0)">
+                <input type="button" name="point" id="point" value="." onclick="calculate('.')">
+                <input type="button" name="persentise" id="persentise" value="%" onclick="calculate('%')">
+                <input type="button" name="equal" id="equal" value="=" onclick="total()">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculate(val) {
+            // document.getElementById("display").value += val;
+            document.getElementById("display").value = document.getElementById("display").value + val;
+        }
+
+        function total() {
+            let result = document.getElementById("display").value;
+            document.getElementById("display").value = eval(result);
+        }
+
+        function clr() {
+            document.getElementById("display").value = null;
+        }
+    </script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // console.log(eval(new String('2 + 2')));
+        // console.log(eval('2 + 2'));
+        // console.log(eval(2 + 2));
+        console.log(2 + 2);
+        // console.log('2 + 2');
+
+        // JavaScript to illustrate eval() function
+        // function func() {
+
+        //     // Original string
+        //     var a = 2;
+        //     var b = 2;
+
+        //     // Finding the sum
+        //     var value = eval((a - b));
+        //     console.log(value);
+        // }
+        // // Driver Code
+        // func();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input type="text" name="inp-name" class="inp-class" id="inp-id"> -->
+    <input type="text" name="val1" class="inp-class" id="val1">
+    <input type="text" name="val2" class="inp-class" id="val2">
+    <button value="anything" onclick="btnclick(this)">Click</button>
+    <input type="text" id="dispdata">
+    <!-- <div id="dispdata"></div> -->
+    <script>
+        function btnclick(kaipan) {
+
+
+
+
+            // let a = 50;
+            // let b = 150;
+            // let a = document.getElementById("val1");
+
+            let a = document.getElementById("val1").value;
+            let b = document.getElementById("val2").value;
+
+            // console.log("input val1 data: ",a);
+            // console.log("input val2 data: ",b);
+            // console.log(a+b);
+
+            let sum = parseInt(a) + parseFloat(b);
+
+            // document.write(a+b);
+            // document.write(sum);
+            // document.getElementById("dispdata").innerHTML = "Test innerHTML "
+            // document.getElementById("dispdata").innerText = "Test innerText"
+            // document.getElementById("dispdata").innerHTML = "<b>Test innerHTML </b>"
+            // document.getElementById("dispdata").innerText = "<b>Test innerText</b>"
+
+            document.getElementById("dispdata").value = sum
+
+
+            // console.log(kaipan);
+            // console.log(kaipan.value);
+
+            // let inpData = document.getElementById("inp-id")
+            // console.log(inpData);
+            // console.log(inpData.value);
+
+            // let inpData = document.getElementsByClassName("inp-class")
+            // console.log(inpData);
+            // console.log(inpData[0].value);
+
+            // let inpData = document.getElementsByName("inp-name")
+            // console.log(inpData);
+            // console.log(inpData[0].value);
+
+            // let inpData = document.getElementsByTagName("input")
+            // console.log(inpData);
+            // console.log(inpData[0].value);
+
+
+            // let inpData = document.querySelector(".inp-class")
+            // console.log(inpData);
+            // console.log(inpData.value);
+
+            // let inpData = document.querySelectorAll("input")
+            // console.log(inpData);
+            // console.log(inpData[0].value);
+            // console.log("called");
+        }
+
+        // *401*7797392855
+    </script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Enter the First number : <input id="first_number">
+    <br> <br> Enter the Second number: <input id="second_number">
+    <br> <br>
+    <button onclick="add()">Add</button>
+    <input id="answer">
+
+
+    <script>
+        function add() {
+            var a, b, c;
+            a = Number(document.getElementById("first_number").value);
+            b = Number(document.getElementById("second_number").value);
+            c = a + b;
+            document.getElementById("answer").value = c;
+        }
+    </script>
+</body>
+
+
+</html> -->
