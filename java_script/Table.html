@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            width: 200px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="deeps">
+        <table>
+            <tr class="deepsinh">
+
+            </tr>
+        </table>
+    </div>
+    <script>
+        let nums = prompt("sad");
+        let num = 10;
+        n = 1;
+        let createE = document.createElement("td");
+        let td = document.getElementsByClassName("deepsinh");
+        let count = 0;
+
+        function deep() {
+            for (var n = 1; n <= num; n++) {
+                document.write(`${nums} *${n} =` + nums * n + "&nbsp" + "&nbsp" + "&nbsp" + "&nbsp" + "&nbsp" + "&nbsp")
+            }
+        }
+        for (let index = 1; index <= 11; index++) {
+            deep()
+            nums++
+            // deepsinh231.appendChild(td);
+            document.write("<br>")
+        }
+    </script>
+</body>
+
+</html>
