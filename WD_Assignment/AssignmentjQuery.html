@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=., initial-scale=1.0">
+    <title>jQuery Assignment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: burlywood;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+
+        .list {
+            width: 90%;
+            margin: 0 auto;
+
+        }
+
+        ol li {
+            /* list-style-type: decimal-leading-zero; */
+            font-size: 40px;
+            color: brown;
+        }
+
+        h1 {
+            color: rgb(78, 78, 174);
+            font-size: 50px;
+            margin: 40px 0;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+
+        ol li h3 {
+            font-size: 40px;
+            color: brown;
+            font-size: 30px;
+            text-transform: capitalize;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 25px !important;
+            text-align: justify;
+            color: black !important;
+            padding: 10px 0;
+            line-height: 40px;
+        }
+
+        .u-list li {
+            font-size: 20px;
+            color: black;
+            padding: 10px 0;
+        }
+
+        .u-list li::first-letter {
+            text-transform: capitalize;
+        }
+
+        .ans {
+            padding: 10px 0;
+            text-transform: capitalize;
+        }
+
+        span {
+            background-color: rgb(236, 239, 240);
+            color: black;
+            padding: 5px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+
+
+            <h1> jQuery Assignment </h1>
+            <ol class="list">
+                <li>
+                    <h3>what is jQuery?</h3>
+                    <p class="ans">answer:</p>
+                    <p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document
+                        traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use
+                        API that works across a multitude of browsers. With a combination of versatility and
+                        extensibility, jQuery has changed the way that millions of people write JavaScript </p>
+                </li>
+
+                <li>
+                    <h3>How to Apply CSS Using JQuery, How to Add Class and Remove Class in Jquery ,
+                        JQuery Animation?</h3>
+                    <p class="ans">answer:</p>
+                    <p class="ans">jQuery Manipulating CSS:</p>
+
+                    <p> addClass() - Adds one or more classes to the selected elements. removeClass() - Removes one or
+                        more classes from the selected elements. toggleClass() - Toggles between adding/removing classes
+                        from the selected elements. css() - Sets or returns the style attribute.</p>
+                    <p class="ans">JQuery Animation:</p>
+                    <p>The required params parameter defines the CSS properties to be animated.</p>
+
+                    <p> The optional speed parameter specifies the duration of the effect. It can take the following
+                        values: "slow", "fast", or milliseconds. </p>
+
+                    <p>The optional callback parameter is a function to be executed after the animation completes. </p>
+                </li>
+
+                <li>
+                    <h3> How to create slider with animation?</h3>
+                    <p class="ans">answer:</p>
+                    <p class="ans">jQuery Sliding Methods:</p>
+
+
+
+                    <p> jQuery has the following slide methods: </p>
+
+
+                    <p><span>1. slideDown()</span></p>
+                    <p>Syntax:
+
+                        <span> $(selector).slideDown(speed,callback);</span>
+                        The optional speed parameter specifies the duration of the effect. It can take the following
+                        values: "slow", "fast", or milliseconds.
+
+                        The optional callback parameter is a function to be executed after the sliding completes.
+                    </p>
+
+
+                    <p><span>2. slideUp()</span></p>
+                    <p>
+                        Syntax:
+                        <span>
+                            $(selector).slideUp(speed,callback);
+                        </span>
+                        The optional speed parameter specifies the duration of the effect. It can take the following
+                        values: "slow", "fast", or milliseconds.
+
+                        The optional callback parameter is a function to be executed after the sliding completes.
+                    </p>
+                    <p><span>3. slideToggle()</span></p>
+
+                    <p> The jQuery slideToggle() method toggles between the slideDown() and slideUp() methods.
+
+                        If the elements have been slid down, slideToggle() will slide them up.
+
+                        If the elements have been slid up, slideToggle() will slide them down.
+
+                        <span> $(selector).slideToggle(speed,callback);</span>
+                        The optional speed parameter can take the following values: "slow", "fast", milliseconds.
+
+                        The optional callback parameter is a function to be executed after the sliding completes.
+
+                    </p>
+
+
+
+
+                </li>
+
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>
