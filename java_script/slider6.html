@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="reviews.js"></script>
+    <title>Review Slider</title>
+</head>
+
+<body>
+    <div class="review-container">
+        <div class="review-header">
+            <h2>What Our Clients Say</h2>
+            <p>We partner with some pretty amazing people! Here’s what they say about us.</p>
+        </div>
+        <div class="review-content">
+            <button class="arrow" id="arrow--left">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none"></rect>
+          <line x1="216" y1="128" x2="40" y2="128" fill="none" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="16"></line>
+          <polyline points="112 56 40 128 112 200" fill="none" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="16"></polyline>
+        </svg>
+      </button>
+            <div class="reviews">
+            </div>
+            <button class="arrow" id="arrow--right">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none"></rect>
+          <line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="16"></line>
+          <polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="16"></polyline>
+        </svg>
+      </button>
+        </div>
+    </div>
+    <div style="height: 100px;"></div>
+
+    <script src="projectInfo.js" type="module"></script>
+    <script>
+        //// FUNCTIONS ////
+        let reviews;
+        let slideIndex = 0;
+
+        function loadStars(stars) {
+            let calculatedStars = [];
+            for (let i = 0; i < Math.floor(stars); i++) {
+                calculatedStars.push(`<img src="images/full-star.svg">`);
+            }
+            if (stars === 5) {
+                return calculatedStars.map(item => item).join('');
+            }
+            if (Number.isInteger(stars)) {
+                for (let i = 0; i < 5 - stars; i++) {
+                    calculatedStars.push(`<img src="images/empty-star.svg">`);
+                }
+            } else {
+                calculatedStars.push(`<img src="images/half-star.svg">`);
+                for (let i = 0; i < 4 - Math.floor(stars); i++) {
+                    calculatedStars.push(`<img src="images/empty-star.svg">`);
+                }
+            }
+            return calculatedStars.map(item => item).join('');
+        }
+
+        function loadReviews(review) {
+            return `<div class="review">
+    <div class="review__headshot">
+      <img src="${review.headshot}" alt="${review.name}">
+    </div>
+    <p class="review__name"><strong>${review.name}</strong></p>
+    <p class="review__location">${review.location}</p>
+    <div class="review__stars">${loadStars(review.stars)}</div>
+    <p class="review__body">${review.body}</p>
+  </div>`
+        };
+
+        function moveSlider(e) {
+            if (e.currentTarget.id.includes('right')) {
+                slideIndex === reviews.length - 1 ? slideIndex = 0 : slideIndex++;
+            } else {
+                slideIndex === 0 ? slideIndex = reviews.length - 1 : slideIndex--;
+            }
+            const reviewDiv = document.querySelector('.reviews');
+            reviewDiv.style.transform = `translate(${-100 * slideIndex}%)`;
+        };
+
+        // 1. Fetch data
+        async function fetchReviews() {
+            await fetch('reviews.json')
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then((data) => {
+                    reviews = data;
+                    document.querySelector('.reviews').innerHTML = data.map(loadReviews).join('');
+                })
+                .catch((error) => {
+                    console.error('There has been a problem with your fetch operation:', error);
+                });
+        }
+        fetchReviews();
+
+
+        //// EVENT LISTENERS ////
+
+        document.querySelector('#arrow--right').addEventListener('click', moveSlider);
+        document.querySelector('#arrow--left').addEventListener('click', moveSlider);
+    </script>
+</body>
+
+</html>

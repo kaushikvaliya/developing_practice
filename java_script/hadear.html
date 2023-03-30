@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .contenar {
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .justify {
+            justify-content: space-between;
+        }
+        
+        .align {
+            align-items: center;
+        }
+        
+        .header_text {
+            display: none;
+        }
+        
+        .header_text.active {
+            width: 100%;
+            display: block;
+            left: 0;
+            top: 50px;
+            color: black;
+            position: absolute;
+            background-color: aqua;
+        }
+        
+        .header_text ul li {
+            display: block;
+            margin: 20px;
+            text-align: center;
+        }
+        
+        @media (min-width:768px) {
+            .bar {
+                display: none;
+            }
+            .header_text {
+                display: block;
+            }
+            .header_text ul li {
+                display: inline-block;
+                padding: 0 20px;
+                margin: 0;
+            }
+            .header_text.active {
+                position: static;
+                background-color: transparent;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <header>
+        <div class="contenar">
+            <div class="row align justify">
+                <div class="col">
+                    <div class="logo">
+                        <h1>logo</h1>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="header_text">
+                        <ul>
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">home</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="bar">
+                        <i class="fa-solid fa-2x fa-bars"></i>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </header>
+
+
+
+    <script>
+        const bar = document.querySelector(".bar");
+        const navbar = document.querySelector('.header_text');
+        const navbarli = document.querySelectorAll(".header_text li");
+
+        bar.addEventListener("click", () => {
+            bar.classList.toggle("active");
+            navbar.classList.toggle('active');
+        });
+
+        let btn = document.querySelector(".bar");
+        let icon = btn.querySelector(".fa-bars");
+
+        btn.onclick = function() {
+            if (icon.classList.contains("fa-bars")) {
+                icon.classList.replace("fa-bars", "fa-times");
+            } else {
+                icon.classList.replace("fa-times", "fa-bars");
+            }
+        }
+
+        navbarli.forEach(element => {
+            element.addEventListener("click", () => {
+                navbar.classList.toggle('active');
+                icon.classList.replace("fa-times", "fa-bars");
+            });
+        });
+        // hamburger button end
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,732 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .col-4 {
+            width: 31%;
+            margin: 0 auto;
+        }
+        
+        .col-12 {
+            width: 100%;
+        }
+        
+        .list_item_menu li.active_all {
+            /* background: #1c87c9; */
+            background: #222831;
+            color: #fff;
+        }
+        
+        .itemBox.hide {
+            display: none;
+        }
+        
+        .order_card {
+            height: 230px;
+            display: flex;
+            border-radius: 8px;
+            box-shadow: 0 0 2px #00000012, 0 2px 2px #0000000f, 0 1px 3px #0000001a;
+            background-color: #f9f9f9;
+            padding: 20px 10px;
+            margin: 20px 0;
+        }
+        
+        .order_card:hover {
+            box-shadow: #00000059 0 5px 15px;
+        }
+        
+        .order_card_img img {
+            width: 94px;
+            height: 94px;
+            margin: 4px 7px;
+            border-radius: 50%;
+            cursor: pointer;
+            object-fit: cover;
+        }
+        
+        .order_card_text {
+            padding: 0px 10px;
+            flex: 1 1 auto;
+        }
+        
+        .order_card_text h6 {
+            height: 18px;
+            width: 18px;
+            border-radius: 2px;
+            border: .1rem solid #00754a !important;
+            display: grid;
+            place-items: center;
+        }
+        
+        .order_card_text h6 span {
+            display: inline-block;
+            height: 9px;
+            width: 9px;
+            border-radius: 50%;
+            background-color: #00754a;
+        }
+        
+        .order_card_text h5 {
+            height: 18px;
+            width: 18px;
+            border-radius: 2px;
+            border: .1rem solid #d62c20 !important;
+            display: grid;
+            place-items: center;
+        }
+        
+        .order_card_text h5 span {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 8px solid #d62c20;
+        }
+        
+        .order_card_text h4 {
+            color: #000;
+            font-size: 15px;
+            padding-top: 8px;
+        }
+        
+        .order_card_text h4+span {
+            display: block;
+            color: #a7a7a7;
+            font-size: 11px;
+            padding: 5px 0;
+            line-height: 18px;
+            word-spacing: 0px;
+        }
+        
+        .order_card_text small {
+            border: none;
+            background-color: #e6edeb;
+            border-radius: 5px;
+            padding: 3px 5px;
+            font-size: 10px;
+            color: #096;
+            font-weight: 600;
+        }
+        
+        .order_card_text span+span {
+            font-size: 11px;
+            color: #cca55e;
+            line-height: 18px;
+            font-weight: 600;
+        }
+        
+        .order_card_text p {
+            width: 100% !important;
+            line-height: 18px;
+            font-size: 11px;
+            padding: 5px 0;
+        }
+        
+        .order_card_text p+div {
+            /* flex: 1 1 auto; */
+            padding: 15px 0;
+        }
+        
+        .order_card_footer {
+            width: 100%;
+            align-items: center;
+            display: flex;
+            justify-content: space-between !important;
+        }
+        
+        .order_card_footer_text p {
+            color: #000;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: SoDoSans_Semibold, Helvetica, sans-serif;
+        }
+        
+        .order_card_footer_btn button {
+            padding: 8px 22px;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px #a3a3a3ad;
+            color: #c7c7c7;
+            background-color: #000000a8;
+            border: none;
+        }
+        
+        .list_item_menu {
+            text-align: center;
+        }
+        
+        .list_item_menu ul li {
+            display: inline-block;
+            padding: 0 20px;
+        }
+        
+        .ist_item_menu li.active_all {
+            background: #222831;
+            color: #fff;
+        }
+        
+        .itemBox.hide {
+            display: none;
+        }
+        /* .order_card.hide {
+            display: none;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="list_item_menu">
+                    <ul>
+                        <li class="list active_all" data-filter="all">All</li>
+                        <li class="list" data-filter="burger">Burger</li>
+                        <li class="list" data-filter="pizza">Pizza</li>
+                        <li class="list" data-filter="pasta">Pasta</li>
+                        <li class="list" data-filter="fires">Fries</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-4 itemBox">
+                    <div class="order_card" data-filter="burger">
+                        <div class="order_card_img" onclick="setimg('drink_img/100377.jpg','Caffe Latte','Our dark, Rich in flavour espresso balanced with steamed mil...')">
+                            <img src="drink_img/100377.jpg" alt="">
+                        </div>
+                        <div class="order_card_text">
+                            <h6><span></span></h6>
+                            <h4>Caffe Latte</h4>
+                            <span>SHORT(237 ML) .104 kcal</span>
+                            <p>Our dark, Rich in flavour espresso balanced with steamed mil...</p>
+                            <div></div>
+                            <div class="order_card_footer">
+                                <div class="order_card_footer_text">
+                                    <p>₹ 273.00</p>
+                                </div>
+                                <div class="order_card_footer_btn">
+                                    <button>Add Item</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-4 itemBox">
+                    <div class="order_card " data-filter="pizza">
+                        <div class="order_card_img" onclick="setimg('drink_img/100377.jpg','Caffe Latte','Our dark, Rich in flavour espresso balanced with steamed mil...')">
+                            <img src="drink_img/100377.jpg" alt="">
+                        </div>
+                        <div class="order_card_text">
+                            <h6><span></span></h6>
+                            <h4>Caffe Latte</h4>
+                            <span>SHORT(237 ML) .104 kcal</span>
+                            <p>Our dark, Rich in flavour espresso balanced with steamed mil...</p>
+                            <div></div>
+                            <div class="order_card_footer">
+                                <div class="order_card_footer_text">
+                                    <p>₹ 273.00</p>
+                                </div>
+                                <div class="order_card_footer_btn">
+                                    <button>Add Item</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-4 itemBox ">
+                    <div class="order_card " data-filter="pasta">
+                        <div class="order_card_img" onclick="setimg('drink_img/100377.jpg','Caffe Latte','Our dark, Rich in flavour espresso balanced with steamed mil...')">
+                            <img src="drink_img/100377.jpg" alt="">
+                        </div>
+                        <div class="order_card_text">
+                            <h6><span></span></h6>
+                            <h4>Caffe Latte</h4>
+                            <span>SHORT(237 ML) .104 kcal</span>
+                            <p>Our dark, Rich in flavour espresso balanced with steamed mil...</p>
+                            <div></div>
+                            <div class="order_card_footer">
+                                <div class="order_card_footer_text">
+                                    <p>₹ 273.00</p>
+                                </div>
+                                <div class="order_card_footer_btn">
+                                    <button>Add Item</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <script>
+        // data-filter 
+        let list = document.querySelectorAll('.list');
+        let itemBox = document.querySelectorAll('.itemBox');
+
+        for (let i = 0; i < list.length; i++) {
+            list[i].addEventListener('click', function() {
+                for (let j = 0; j < list.length; j++) {
+                    list[j].classList.remove('active_all')
+                }
+                this.classList.add('active_all');
+
+                let dataFilter = this.getAttribute('data-filter');
+
+                for (let k = 0; k < itemBox.length; k++) {
+                    itemBox[k].classList.remove('hide');
+                    itemBox[k].classList.add('hide');
+
+                    if (itemBox[k].getAttribute('data-item') == dataFilter || dataFilter == "all") {
+                        itemBox[k].classList.remove('hide');
+                        itemBox[k].classList.add('active_all');
+                    }
+                }
+            })
+        }
+
+
+
+
+        // data-filter 2
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: sans-serif;
+        }
+        
+        .menu-item ul li {
+            display: inline-block;
+            padding: 30px 20px;
+        }
+        
+        .filter:hover {
+            cursor: pointer;
+        }
+        
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .col-4 {
+            width: 31%;
+            margin: 13px;
+        }
+        
+        .col-12 {
+            width: 100%;
+        }
+        
+        .order_card {
+            height: 230px;
+            display: flex;
+            border-radius: 8px;
+            box-shadow: 0 0 2px #00000012, 0 2px 2px #0000000f, 0 1px 3px #0000001a;
+            background-color: #f9f9f9;
+            padding: 20px 10px;
+            margin: 20px 0;
+        }
+        
+        .order_card:hover {
+            box-shadow: #00000059 0 5px 15px;
+        }
+        
+        .order_card_img img {
+            width: 94px;
+            height: 94px;
+            margin: 4px 7px;
+            border-radius: 50%;
+            cursor: pointer;
+            object-fit: cover;
+        }
+        
+        .order_card_text {
+            padding: 0px 10px;
+            flex: 1 1 auto;
+        }
+        
+        .order_card_text h6 {
+            height: 18px;
+            width: 18px;
+            border-radius: 2px;
+            border: .1rem solid #00754a !important;
+            display: grid;
+            place-items: center;
+        }
+        
+        .order_card_text h6 span {
+            display: inline-block;
+            height: 9px;
+            width: 9px;
+            border-radius: 50%;
+            background-color: #00754a;
+        }
+        
+        .order_card_text h5 {
+            height: 18px;
+            width: 18px;
+            border-radius: 2px;
+            border: .1rem solid #d62c20 !important;
+            display: grid;
+            place-items: center;
+        }
+        
+        .order_card_text h5 span {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 8px solid #d62c20;
+        }
+        
+        .order_card_text h4 {
+            color: #000;
+            font-size: 15px;
+            padding-top: 8px;
+        }
+        
+        .order_card_text h4+span {
+            display: block;
+            color: #a7a7a7;
+            font-size: 11px;
+            padding: 5px 0;
+            line-height: 18px;
+            word-spacing: 0px;
+        }
+        
+        .order_card_text small {
+            border: none;
+            background-color: #e6edeb;
+            border-radius: 5px;
+            padding: 3px 5px;
+            font-size: 10px;
+            color: #096;
+            font-weight: 600;
+        }
+        
+        .order_card_text span+span {
+            font-size: 11px;
+            color: #cca55e;
+            line-height: 18px;
+            font-weight: 600;
+        }
+        
+        .order_card_text p {
+            width: 100% !important;
+            line-height: 18px;
+            font-size: 11px;
+            padding: 5px 0;
+        }
+        
+        .order_card_text p+div {
+            /* flex: 1 1 auto; */
+            padding: 15px 0;
+        }
+        
+        .order_card_footer {
+            width: 100%;
+            align-items: center;
+            display: flex;
+            justify-content: space-between !important;
+        }
+        
+        .order_card_footer_text p {
+            color: #000;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: SoDoSans_Semibold, Helvetica, sans-serif;
+        }
+        
+        .order_card_footer_btn button {
+            padding: 8px 22px;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px #a3a3a3ad;
+            color: #c7c7c7;
+            background-color: #000000a8;
+            border: none;
+        }
+        
+        .hide {
+            /* display: none; */
+            animation: hide .9s ease 0s 1 normal forwards;
+            transform-origin: top left;
+            /* transform-origin: center; */
+        }
+        
+        @keyframes hide {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(0);
+                width: 0;
+                height: 0;
+                margin: 0;
+            }
+        }
+        
+        .show {
+            animation: show .9s ease 0s 1 normal forwards;
+            transform-origin: top left;
+            /* transform-origin: center; */
+        }
+        
+        @keyframes show {
+            0% {
+                transform: scale(0);
+                width: 0;
+                height: 0;
+                margin: 0;
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="menu-item">
+                        <ul class="filters">
+                            <li class="filter" data-filter="all">ALL</li>
+                            <li class="filter" data-filter="dev">DEV</li>
+                            <li class="filter" data-filter="design">DESIGN</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row  projects">
+                <div class="col-4 kaushik" data-filter="dev">
+                    <div class="order_card ">
+                        <div class="order_card_img">
+                            <img src="../css/header/img/18289de2eebb66544.jpg" alt="">
+                        </div>
+                        <div class="order_card_text">
+                            <h6><span></span></h6>
+                            <h4>Caffe Latte</h4>
+                            <span>SHORT(237 ML) .104 kcal</span>
+                            <p>Our dark, Rich in flavour espresso balanced with steamed mil...</p>
+                            <div></div>
+                            <div class="order_card_footer">
+                                <div class="order_card_footer_text">
+                                    <p>₹ 273.00</p>
+                                </div>
+                                <div class="order_card_footer_btn">
+                                    <button>Add Item</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-4 kaushik" data-filter="design">
+                    <div class="order_card ">
+                        <div class="order_card_img">
+                            <img src="../css/header/img/18289de2eebb66544.jpg" alt="">
+                        </div>
+                        <div class="order_card_text">
+                            <h6><span></span></h6>
+                            <h4>design</h4>
+                            <span>SHORT(237 ML) .104 kcal</span>
+                            <p>Our dark, Rich in flavour espresso balanced with steamed mil...</p>
+                            <div></div>
+                            <div class="order_card_footer">
+                                <div class="order_card_footer_text">
+                                    <p>₹ 273.00</p>
+                                </div>
+                                <div class="order_card_footer_btn">
+                                    <button>Add Item</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-4 kaushik" data-filter="dev">
+                    <div class="order_card">
+                        <div class="order_card_img">
+                            <img src="../css/header/img/18289de2eebb66544.jpg" alt="">
+                        </div>
+                        <div class="order_card_text">
+                            <h6><span></span></h6>
+                            <h4>Caffe Latte</h4>
+                            <span>SHORT(237 ML) .104 kcal</span>
+                            <p>Our dark, Rich in flavour espresso balanced with steamed mil...</p>
+                            <div></div>
+                            <div class="order_card_footer">
+                                <div class="order_card_footer_text">
+                                    <p>₹ 273.00</p>
+                                </div>
+                                <div class="order_card_footer_btn">
+                                    <button>Add Item</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-4 kaushik" data-filter="design">
+                    <div class="order_card">
+                        <div class="order_card_img">
+                            <img src="../css/header/img/18289de2eebb66544.jpg" alt="">
+                        </div>
+                        <div class="order_card_text">
+                            <h6><span></span></h6>
+                            <h4>design</h4>
+                            <span>SHORT(237 ML) .104 kcal</span>
+                            <p>Our dark, Rich in flavour espresso balanced with steamed mil...</p>
+                            <div></div>
+                            <div class="order_card_footer">
+                                <div class="order_card_footer_text">
+                                    <p>₹ 273.00</p>
+                                </div>
+                                <div class="order_card_footer_btn">
+                                    <button>Add Item</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-4 kaushik" data-filter="dev">
+                    <div class="order_card ">
+                        <div class="order_card_img">
+                            <img src="../css/header/img/18289de2eebb66544.jpg" alt="">
+                        </div>
+                        <div class="order_card_text">
+                            <h6><span></span></h6>
+                            <h4>Caffe Latte</h4>
+                            <span>SHORT(237 ML) .104 kcal</span>
+                            <p>Our dark, Rich in flavour espresso balanced with steamed mil...</p>
+                            <div></div>
+                            <div class="order_card_footer">
+                                <div class="order_card_footer_text">
+                                    <p>₹ 273.00</p>
+                                </div>
+                                <div class="order_card_footer_btn">
+                                    <button>Add Item</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const filters = document.querySelectorAll('.filter');
+
+        filters.forEach(filter => {
+
+            filter.addEventListener('click', function() {
+
+                let selectedFilter = filter.getAttribute('data-filter');
+                let itemsToHide = document.querySelectorAll(`.projects .kaushik:not([data-filter='${selectedFilter}'])`);
+                let itemsToShow = document.querySelectorAll(`.projects [data-filter='${selectedFilter}']`);
+
+                if (selectedFilter == 'all') {
+                    itemsToHide = [];
+                    itemsToShow = document.querySelectorAll('.projects [data-filter]');
+                }
+
+                itemsToHide.forEach(el => {
+                    el.classList.add('hide');
+                    el.classList.remove('show');
+                });
+
+                itemsToShow.forEach(el => {
+                    el.classList.remove('hide');
+                    el.classList.add('show');
+                });
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>
