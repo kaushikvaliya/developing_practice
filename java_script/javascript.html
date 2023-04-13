@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Enter the First number : <input id="first_number">
+    <br> Enter the Second number: <input id="second_number">
+    <br>
+    <button onclick="add()">Add</button>
+    <input id="answer">
+
+
+    <script>
+        function add() {
+            var a, b, c;
+            a = Number(document.getElementById("first_number").value);
+            b = Number(document.getElementById("second_number").value);
+            c = a + b;
+            document.getElementById("answer").value = c;
+        }
+    </script>
+</body>
+
+
+</html>
