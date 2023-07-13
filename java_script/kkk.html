@@ -1,0 +1,132 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>kkkkkkkkkkkkkkkkkkkkkkkk</p>
+
+
+    <form method="post">
+        <table>
+            <tr>
+                <td> <label for="username">User name</label> </td>
+                <td>
+
+                    <input type="text" class="thisrequired" name="username" id="username" required>
+                </td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td>
+                    <input type="text" class="thisrequired" name="password" id="password" required>
+                </td>
+            </tr>
+            <tr>
+                <td>confirm password</td>
+                <td><input type="text" class="thisrequired" name="cpassword" id="cpassword" required></td>
+            </tr>
+            <tr>
+                <td>new field</td>
+                <td><input type="text" class="thisrequired" name="nfield" id="nfield" required></td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td><input type="text" class="thisrequired" name="email" id="email" required></td>
+            </tr>
+            <tr>
+                <td>mobile</td>
+                <td>
+                    <input type="text" class="thisrequired" name="mobile" id="mobile" required pattern="[0-9]+"
+                        minlength="10" maxlength="10" title="please enter number only">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" name="btn" id="btn"></td>
+            </tr>
+        </table>
+
+
+    </form>
+
+
+    <script>
+
+        var elements = document.querySelectorAll('.thisrequired');
+
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].addEventListener('blur', function () {
+                var val = this.getAttribute('name');
+                var arroe = val + "Error";
+                var txt = document.createElement("SPAN");
+                txt.innerHTML = arroe;
+                if (this.value == "") {
+                    if (this.nextSibling == null) {
+                        this.insertAdjacentElement('afterend', txt)
+
+                    }
+                } else {
+                    if (this.nextSibling != null) {
+                        if (this.nextSibling.nodeName == "SPAN") {
+                            this.nextSibling.remove()
+                        }
+                    }
+                }
+            });
+        }
+
+
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <br> <br>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores distinctio a tenetur consectetur, reiciendis
+        minus iusto qui, excepturi dignissimos, optio hic? Dolor nihil minus nobis esse ducimus laudantium autem
+        delectus.</p>
+    <input type="text" id="myParentElement">
+
+    <p>nextSibling</p>
+
+    <br> <br>
+    <script>
+
+        // Get the parent element by ID
+        const parent = document.getElementById('myParentElement');
+
+        // Create a new child element
+        const child = document.createElement('span');
+        child.textContent = 'This is a new child element.';
+        // console.log(parent.nextSibling);
+        // Append the child element to the parent element
+        // parent.nextSibling.insertAfter(child);
+        console.log(parent.insertAdjacentElement('afterend', child));
+        // parent.nextSibling.nextSibling.append(child);
+        parent.insertAdjacentElement('afterend', child);
+        // parent.nextSibling.append(child)
+
+    </script>
+</body>
+
+</html>

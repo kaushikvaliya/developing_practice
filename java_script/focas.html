@@ -14,24 +14,24 @@
             width: 100%;
             height: 100%;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         .container {
             height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        
+
         .main {
             position: relative;
         }
-        
+
         label {
             position: absolute;
             font-size: 1rem;
@@ -43,7 +43,7 @@
             margin: 0 10px;
             transition: .3s ease-out;
         }
-        
+
         input {
             font-size: 16px;
             outline: none;
@@ -52,16 +52,16 @@
             padding: 16px 5px;
             color: #000;
         }
-        
+
         input:focus {
             border-color: #6200EE;
         }
-        
+
         input:focus+label {
             color: #6200EE;
             top: -10px;
         }
-        
+
         input:not(:placeholder-shown)+label {
             top: -10px;
         }

@@ -13,22 +13,22 @@
             box-sizing: border-box;
             text-transform: capitalize;
         }
-        
+
         span {
             color: red;
         }
-        
+
         h1 {
             margin: 40px 0;
             color: green;
         }
-        
+
         .btn {
             background-color: cadetblue;
             padding: 8px 20px;
             border: none;
         }
-        
+
         input {
             padding: 5px;
         }
@@ -42,16 +42,23 @@
 
         <form action="">
 
-
-
-            <p><span>*</span> user name : <input type="text" placeholder="Name" onblur="myFunction(this ,'textError','This is name required')"> <span id="textError"></span> <br> <br></p>
-            <p><span>*</span> user email : <input type="email" placeholder="Email" onblur="myFunction(this ,'emailError', 'This is email required')"> <span id="emailError"></span> <br> <br></p>
-            <p><span>*</span> user password : <input type="password" placeholder="Password" onblur="myFunction(this ,'passwordError' ,'This is password required')"> <span id="passwordError"></span> <br> <br></p>
+            <p><span>*</span> user name : <input type="text" placeholder="Name"
+                    onblur="myFunction(this ,'textError','This is name required')"> <span id="textError"></span> <br>
+                <br>
+            </p>
+            <p><span>*</span> user email : <input type="email" placeholder="Email"
+                    onblur="myFunction(this ,'emailError', 'This is email required')"> <span id="emailError"></span>
+                <br> <br>
+            </p>
+            <p><span>*</span> user password : <input type="password" placeholder="Password"
+                    onblur="myFunction(this ,'passwordError' ,'This is password required')"> <span
+                    id="passwordError"></span> <br> <br></p>
             <button class="btn" type="submit">submit</button>
 
         </form>
 
         <script>
+
             function myFunction(e, peramitar, kaushik) {
                 if (e.value == "") {
                     document.getElementById(peramitar).innerText = kaushik;

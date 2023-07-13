@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+
+    <!-- <p>lkjhgcxzxcvbnm,</p> -->
+
+
+
+    <script>
+
+
+        // const arr = [10, 20, 30, 40, 50];
+        // const newarr = arr.map((arrval, i) => {
+        //     console.log(arrval, i);
+        // });
+
+
+
+
+        var product = [
+            { name: "mobile", price: 100 },
+            { name: "leptop", price: 200 },
+            { name: "pc", price: 300 },
+            { name: "mac", price: 400 },
+        ];
+
+        var productnew = product.map((productval) => {
+            if (productval.name == "mobile") {
+                return { name: "lllll", price: 6000 };
+            } else {
+                return productval;
+            }
+        });
+
+        console.log(productnew);
+
+
+
+        // Create a new paragraph element
+        const paragraph = document.createElement('p');
+        // Add some text to the paragraph
+        const text = document.createTextNode('This is a new paragraph.');
+        paragraph.appendChild(text);
+        // Add the paragraph to the document
+        document.body.appendChild(paragraph);
+
+
+
+
+    </script>
+</body>
+
+</html>
