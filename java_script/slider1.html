@@ -6,17 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- Password airtel -->
-    <!-- air80123 -->
-    <!-- Tops student 5g -->
-    <!-- Tops**@43210 -->
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         .main {
             width: 70%;
             height: 490px;
@@ -26,21 +22,21 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .main img {
             width: 100%;
             display: block;
         }
-        
+
         .slids {
             position: absolute;
             transition: 2s;
         }
-        
+
         .btn {
             text-align: center;
         }
-        
+
         .btn button {
             padding: 5px 8px;
             /* bottom: ; */
@@ -68,11 +64,9 @@
         const slids = document.querySelectorAll(".slids");
         var count = 0;
 
-        slids.forEach(
-            (slids, index) => {
-                // console.log(slids);
-                slids.style.left = ` ${index * 100}% `
-            }
+        slids.forEach((slids, index) => {
+            slids.style.left = ` ${index * 100}% `
+        }
         );
 
         function next(n) {
@@ -91,7 +85,6 @@
 
 
         function sladimg() {
-
             if (count > slids.length - 1) {
                 count = 0;
             }
@@ -113,14 +106,14 @@
         var autoplayInterval = 4000;
 
         if (autoplay) {
-            setInterval(function() {
-                newIndex++;
+            setInterval(function () {
+                count++;
                 sladimg();
             }, autoplayInterval);
         }
         sladimg();
 
-        // setInterval(kkkk, 1000);
+
     </script>
 </body>
 

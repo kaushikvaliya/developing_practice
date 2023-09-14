@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="col_80">
+                <h1>Functions</h1>
+                <p>Functions in JavaScript are blocks of code that can be defined and invoked to perform specific tasks.
+                    They allow for code reuse, modularity, and organization by encapsulating a set of instructions.
+                    Functions can accept input parameters, execute operations, and optionally return values.</p>
+                <h4>Declaring a Function</h4>
+                <p>The syntax to declare a <code>function</code> is:</p>
+                <code><span><span>function</span> <span>nameOfFunction</span> (<span ></span>) </span>{ <br>
+                &nbsp;&nbsp;<span>// function body   </span> <br>
+                }</code>
+                <br> <br>
+                <ul>
+                    <li>A function is declared using the <code>function</code> keyword.</li>
+                    <li>The basic rules of naming a function are similar to naming a variable. It is better to write a
+                        descriptive name for your function. For example, if a function is used to add two numbers, you
+                        could
+                        name the function <code>add</code> or <code>addNumbers</code>.</li>
+                    <li>The body of function is written within <code>{}</code>.</li>
+
+                </ul>
+                <h4>For example : </h4>
+                <code><span>// declaring a function named greet()</span> <br>
+                    <span><span>function</span> <span>greet</span>(<span></span>) </span>{ <br>
+                        &nbsp;&nbsp;<span>console</span>.log(<span>"Hello there"</span>); <br>
+                    }</code>
+                <h4>Calling a Function</h4>
+                <p>In the above program, we have declared a function named greet(). To use that function, we need to
+                    call it.</p>
+                <p>Here's how you can call the above <code>greet()</code> function.</p>
+                <code><span>// function call</span> <br>
+                    greet();</code>
+
+            </div>
+            <div class="row ">
+                <div class="col_50 ">
+
+                    <h4>Example : Display a Text</h4>
+                    <br>
+                    <br>
+                    <code><span>// program to print a text</span> <br>
+                            <span>// declaring a function</span>  <br>
+                            <span><span>function</span> <span>greet</span>(<span></span>) </span>{ <br>
+                                &nbsp;&nbsp;<span>console</span>.log(<span>"Hello world!"</span>); <br>
+                            } <br>
+                            
+                            <span>// calling the function</span>  <br>
+                            greet();</code>
+
+                    <p><strong>Output :</strong>Hello world!</p>
+                </div>
+
+                <div class="col_50">
+                    <h4>Example : Function Parameterst</h4>
+                    <p>A function can also be declared with parameters. A parameter is a value that is passed when
+                        declaring a function.</p>
+                    <code><span>// program to print the text</span> <br>
+                        <span>// declaring a function</span> <br>
+                        <span><span>function greet ( name) </span>{ <br>
+                            &nbsp;&nbsp; <span>console.log("Hello  + name ")</span> <br>
+                        }
+                        <br>
+                        <span>// variable name can be different</span> <br>
+                        <span>let name = prompt("Enter a name: "</span>); <br>
+                        
+                        <span>// calling function</span>
+                        greet(name);</code>
+                    <p><strong>Output : </strong> Enter a name: kaushik; <br>
+                        Hello kaushik </p>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col_50">
+                    <h4>Example : Function Return</h4>
+                    <p>The <code>return</code> statement can be used to return the value to a function call.</p>
+                    <p>The <code>return</code> statement denotes that the function has ended. Any code after return is
+                        not executed.
+                    </p>
+
+                    <code>
+                        <span>// program to add two numbers</span> <br>
+                        <span>// declaring a function</span> <br>
+                        <span>function add(a, b) {</span> <br>
+                            &nbsp;&nbsp; <span>return a + b;  </span><br>
+                        } <br>
+                    
+                        <span>// take input from the user</span> <br>
+                        <span>let number1 = parseFloat (prompt( "Enter first number: " )); </span><br>
+                        <span>let number2 = parseFloat (prompt( "Enter second number: " )); </span><br>
+                        
+                        <span>// calling function</span> <br>
+                        <span>let result = add(number1,number2); <br>
+                        
+                        <span>// display the result</span> <br>
+                        <span >console.log("The sum is " + result); </span>
+                    </code>
+                    <p><strong>Output : </strong> Enter first number: 4.4 <br>
+                        Enter second number: 4 <br>
+                        The sum is 8.4 </p>
+
+                </div>
+
+                <div class="col_50">
+                    <h4>Function Expressions</h4>
+                    <p>In Javascript, functions can also be defined as expressions.</p>
+
+                    <code>
+                        <span class="d_block">// program to find the square of a number</span> 
+                        <span class="d_block">// function is declared inside the variable</span>
+                        <span class="d_block">let x = function (num) { return num * num };</span>
+                        <span class="d_block text_indent">console.log(x(4));</span>
+                        <span class="d_block">// can be used as variable value for other variables</span>
+                        <span class="d_block">let y = x(3);</span>
+                        <span class="d_block">console.log(y);</span>
+                    </code>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <script>
+        // program to print a text
+        // declaring a function
+        function greet() {
+            console.log("Hello world!");
+        }
+        // calling the function
+        greet();
+
+
+        // program to print the text
+        // declaring a function
+
+        // function Hello(name) {
+        //     console.log("Hello " + name);
+        // }
+
+        // // variable name can be different
+
+        // let name = prompt("Enter a name: ");
+        // // calling function
+
+        // Hello(name);
+
+        // program to add two numbers using a function
+        // declaring a function
+
+
+
+        function add(a, b) {
+            console.log(a + b);
+        }
+
+        // calling functions
+        add(5, 5);
+        add(6, 6);
+
+
+
+
+
+        // program to add two numbers
+        // declaring a function
+
+        // function add(a, b) {
+        //     return a + b;
+        // }
+
+        // // take input from the user
+        // let number1 = parseFloat(prompt("Enter first number: "));
+        // let number2 = parseFloat(prompt("Enter second number: "));
+
+        // // calling function
+        // let result = add(number1, number2);
+
+        // // display the result
+        // console.log("The sum is " + result);
+
+
+
+
+
+        // Function Expressions
+        console.log("🚀 ~ Expressions:",)
+
+        // program to find the square of a number
+        // function is declared inside the variable
+        let x = function (num) { return num * num };
+        console.log(x(5));
+
+        // can be used as variable value for other variables
+        let y = x(10);
+        console.log(y);
+
+        // callback hell  
+
+
+    </script>
+
+</body>
+
+</html>

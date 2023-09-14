@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="container">
+            <h1>ES6 Dialog boxes</h1>
+            <p>There are three types of dialog boxes supported in JavaScript that are <code>alert</code>,
+                <code>confirm</code>, and <code>prompt</code>. These dialog boxes can be used to perform
+                specific tasks such as raise an alert, to get
+                confirmation of an event or an input, and to get input from the user.
+            </p>
+            <div class="row">
+                <div class="col_50">
+                    <h4>Alert Dialog box</h4>
+                    <p><strong>alert</strong> : Displays a simple message box with an OK button. It is used to show
+                        information to the user.</p>
+                    <p>The syntax of the <code>alert</code> box is:</p>
+                    <code><span>alert(message); </span></code>
+                </div>
+
+                <div class="col_50">
+                    <h4>Confirmation Dialog box</h4>
+                    <p><strong>confirm :</strong> Displays a dialog box with a message and OK and Cancel buttons. It is
+                        used
+                        to get a binary choice from the user (OK or Cancel).
+                    </p>
+                    <p>The syntax of the <code>Confirmation</code> box is:</p>
+                    <code><span>confirm(message); </span></code>
+
+                </div>
+                <div class="col_50">
+                    <h4>Prompt Dialog box</h4>
+                    <p><strong>prompt(message, defaultText):</strong> Displays a dialog box with a message, an input
+                        field for the user
+                        to enter text, and OK and Cancel buttons. It is used to get input from the user.</p>
+                    <p>The syntax of the <code>Confirmation</code> box is:</p>
+                    <code><span>Prompt(message); </span></code>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <script>
+
+
+
+        // Alert dialog box
+        alert("Welcome to the program!");
+
+        // Confirm dialog box
+        var result = confirm("Are you sure you want to proceed?");
+        if (result) {
+            alert("You clicked OK!");
+        } else {
+            alert("You clicked Cancel!");
+        }
+
+        // Prompt dialog box
+        var name = prompt("Please enter your name:");
+        if (name) {
+            alert("Hello, " + name + "!");
+        } else {
+            alert("No name entered!");
+        }
+
+
+    </script>
+
+</body>
+
+</html>

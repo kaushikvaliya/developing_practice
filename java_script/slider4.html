@@ -21,7 +21,7 @@
             text-decoration: none;
             color: inherit;
         }
-        
+
         #example-logo img {
             width: 100%;
             margin-top: 4px
@@ -33,19 +33,19 @@
             max-width: 900px;
             display: none;
         }
-        
+
         .slider_slide:first-child {
             display: block;
         }
-        
+
         .slider_slide>img {
             width: 100%
         }
-        
+
         .slider_nav {
             padding: 15px;
         }
-        
+
         .slider_pagination_btn {
             display: inline-block;
             padding: 6px;
@@ -54,7 +54,7 @@
             outline: none;
             background-color: transparent;
         }
-        
+
         .slider_pagination_btn:before {
             content: '';
             display: inline-block;
@@ -62,15 +62,15 @@
             border-radius: 100%;
             background-color: #ccc;
         }
-        
+
         .slider_pagination_btn:hover:before {
             background-color: #aaa;
         }
-        
+
         .slider_pagination_btn:focus:before {
             background-color: #777;
         }
-        
+
         .slider_pagination_btn.slider_pagination_btn--sel:before {
             background-color: black
         }
@@ -113,12 +113,12 @@
             currentIndex = newIndex;
         }
 
-        navElements[0].addEventListener('click', function() {
+        navElements[0].addEventListener('click', function () {
             newIndex--;
             navigateSlider();
         });
 
-        navElements[1].addEventListener('click', function() {
+        navElements[1].addEventListener('click', function () {
             newIndex++;
             navigateSlider();
         });
@@ -129,7 +129,7 @@
         }
         paginationElement.innerHTML = paginationHTML.join('');
 
-        paginationElement.addEventListener('click', function(e) {
+        paginationElement.addEventListener('click', function (e) {
             var target = e.target;
             if (target.classList.contains("slider_pagination_btn")) {
                 newIndex = Number(target.getAttribute("data-index"));
@@ -141,14 +141,29 @@
         var autoplayInterval = 4000;
 
         if (autoplay) {
-            setInterval(function() {
+            setInterval(function () {
                 newIndex++;
                 navigateSlider();
             }, autoplayInterval);
         }
 
         navigateSlider();
+
+
+
+        // setInterval(function () {
+        //     console.log("🚀 ~ setInterval")
+        // }, 3000);
+
+        // setTimeout(function () {
+        //     console.log("🚀 ~ setTimeout")
+        // }, 3000);
+
+
     </script>
+
+
+
 </body>
 
 </html>

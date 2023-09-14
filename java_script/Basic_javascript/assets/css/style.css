@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: rgba(37, 38, 94, .7);
+}
+
+.container {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.align_items_center {
+    align-items: center;
+}
+
+section {
+    padding: 30px 0;
+}
+
+table {
+    margin: 30px auto;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #0497aa;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+td,
+th {
+    border: 1px sotdd #ddd;
+    padding: 8px;
+    font-size: 18px;
+}
+
+
+
+.d_block {
+    display: block;
+}
+
+.col_12 {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col_50 {
+    width: 50%;
+    margin: 10px 0;
+    padding: 20px 0;
+    /* border: 1px solid #d3dce6; */
+}
+
+h1 {
+    font-size: 30px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.box {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.font_size {
+    font-size: 22px;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.container ol li {
+    padding: 10px 0;
+}
+
+
+p {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 16px 0;
+}
+
+var, samp,
+code {
+    border: 1px solid #d3dce6;
+    padding: 0 6px;
+    border-radius: 4px;
+    font-style: normal;
+    font-family: "Droid Sans Mono", "Inconsolata", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier", monospace;
+    display: inline-block;
+    line-height: 24px;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0 2px;
+}
+
+
+
+code span {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+h4 {
+    padding: 10px 0;
+    font-size: 20px;
+    color: #537fe7;
+}
+
+.img img {
+    display: block;
+    margin: 0 auto;
+}
+
+ul li {
+    line-height: 30px;
+}
+
+.col_80 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+td button {
+    display: inline-block;
+    background-color: #537fe7;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.box_11 {
+    background-color: #537fe7;
+    /* background-clip: content-box; */
+    /* background-clip: border-box; */
+    background-origin: border-box;
+    /* height: 200px; */
+}

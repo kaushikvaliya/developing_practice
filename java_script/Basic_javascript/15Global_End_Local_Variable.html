@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <h1> Global & Local Variable</h1>
+
+            <div class="row">
+                <div class="col_50">
+                    <h4>Global variables</h4>
+                    <p>Global variables in JavaScript are declared outside of any function or block, making them
+                        accessible throughout the entire program. They have a global scope and can be accessed by any
+                        part of the code. </p>
+                </div>
+
+                <div class="col_50">
+                    <h4>Local variables</h4>
+                    <p>Local variables, on the other hand, are declared within a function or block and are only
+                        accessible within that specific function or block. They have a local scope and cannot be
+                        accessed from outside. </p>
+                </div>
+            </div>
+
+            <h4 class="text_center">this both example in script</h4>
+        </div>
+    </section>
+
+    <script>
+        // globalVariable
+        var globalVariable = "I am a global variable";
+
+        function myFunction() {
+            console.log("Accessing the global variable inside a function");
+            console.log(globalVariable); // Accessing the global variable inside a function
+        }
+        myFunction()
+
+
+        console.log(globalVariable); // Accessing the global variable outside the function
+
+
+
+
+
+
+
+
+
+        function myFunction2() {
+            var localVariable = "I am a local variable";
+            console.log(localVariable); // Accessing the local variable inside the function
+        }
+
+        myFunction2();
+
+        console.log(localVariable); // Error: localVariable is not defined (trying to access it outside the function)
+
+
+    </script>
+
+</body>
+
+</html>

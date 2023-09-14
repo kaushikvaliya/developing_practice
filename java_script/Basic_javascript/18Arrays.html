@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <h1>Arrays</h1>
+            <p>An array is an object that can store multiple values at once.</p>
+            <code>
+                <span class="d_block">const words = ['hello', 'world', 'welcome'];</span>
+            </code>
+            <p>Here, <code>words</code> is an array. The array is storing 3 values.</p>
+            <h4 class="text_center">Create an Array</h4>
+            <p class="text_center">You can create an array using two ways:</p>
+            <div class="row">
+                <div class="col_50">
+                    <h4>1. Using an array literal</h4>
+                    <p>The easiest way to create an array is by using an array literal []. </p>
+                    <h4>Example :</h4>
+                    <code><span>const array1 = ["eat", "sleep"];</span></code>
+                </div>
+                <div class="col_50">
+                    <h4>2. Using the new keyword</h4>
+                    <p>You can also create an array using JavaScript's new keyword.</p>
+                    <h4>Example :</h4>
+                    <code><span>const array2 = new Array("eat", "sleep");</span></code>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+    <script>
+
+
+        // empty array
+        const myList = [];
+
+        // array of numbers
+        const numberArray = [2, 4, 6, 8];
+
+        // array of strings
+        const array1 = ["Saab", "Volvo", "BMW"];
+        console.log("array of strings");
+        console.log(array1);
+
+
+        // console.log(array[0]);
+        // console.log(array[1]);
+        // console.log(array[2]);
+
+        // for (let index = 0; index < array1.length; index++) {
+        //     console.log(array1[index]);
+        // }
+
+        // array with mixed data types
+        console.log("array with mixed data types");
+        const newData = ['work', 'exercise', 1, true];
+
+        console.log(newData);
+
+
+        console.log("Using the new keyword");
+
+        // Creating a new array with specific values
+        let colors = new Array('red', 'green', 'blue');
+        console.log(colors); // Output: ['red', 'green', 'blue']
+
+        for (let index = 0; index < colors.length; index++) {
+            console.log(colors[index]);
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <h1>JavaScript if...else Statement</h1>
+
+            <p style="display: list-item;">In JavaScript, there are three forms of the <code>if...else</code>
+                statement.
+            </p>
+            <ol>
+                <li><strong>if</strong> statement</li>
+                <li><strong>if...else</strong> statement</li>
+                <li><strong>if...else if...else</strong> statement</li>
+            </ol>
+            <h4 class="text_center"><code>If</code> statement</h4>
+
+            <div class="row align_items_center">
+                <div class="col_50">
+                    <h4> if Statement</h4>
+                    <p>It evaluates the content only if expression is true.</p>
+                    <p>The syntax of the <code>if</code> statement is:</p>
+                    <code><span >if</span> (condition) { <br>
+                   &nbsp; &nbsp;<span>// the body of if</span> <br>
+                }</code>
+                </div>
+
+                <div class="col_50">
+                    <div class="img">
+                        <img src="assets/img/javascript-if-statement.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <h4 class="text_center"><code>If...else</code> Statement</h4>
+
+            <div class="row align_items_center">
+                <div class="col_50">
+                    <h4>If...else Statement</h4>
+                    <p>It evaluates the content whether condition is true of false.</p>
+                    <p>The syntax of the <code>If...else</code> statement is:</p>
+
+                    <code>
+                        <span >if</span> (condition) { <br>
+                            &nbsp; &nbsp;<span>// block of code if condition is true</span> <br>
+                    } <span>else</span> {  <br>
+                        &nbsp; &nbsp;<span>// block of code if condition is false</span> <br>
+                    }</code>
+                </div>
+                <div class="col_50">
+                    <div class="img">
+                        <img src="assets/img/javascript-if-else.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <h4 class="text_center"><code>if...else if...else</code> Statement</h4>
+
+            <div class="row align_items_center">
+                <div class="col_50">
+                    <h4>if...else if...else Statement</h4>
+                    <p>To check multiple conditions and execute the corresponding block if a condition is true, you use
+                        the <code>if...else if...else</code> statement</p>
+                    <p>The syntax of the <code>if...else if...else</code> statement is:</p>
+
+                    <code><span>if</span> (condition1) { <br>
+                        &nbsp; &nbsp;<span>// code block 1</span> <br>
+                    } <span>else</span> <span>if</span> (condition2){ <br>
+                        &nbsp; &nbsp;<span>// code block 2</span> <br>
+                    } <span>else</span> { <br>
+                        &nbsp; &nbsp;<span>// code block 3</span> <br>
+                    }</code>
+                </div>
+                <div class="col_50">
+                    <div class="img">
+                        <img src="assets/img/javascript-if-else-if (1).png" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <script>
+        //  Example : if Statement
+
+        const number = 10;
+        // check if number is greater than 0
+        if (number > 9) {
+            // the body of the if statement
+            console.log("value of a is greater than 9");
+        }
+        // Output :  value of a is greater than 9
+
+        //  Example : If...else Statement
+        var a = 20;
+        if (a % 2 == 0) {
+            console.log("a is even number");
+        }
+        else {
+            console.log("a is odd number");
+        }
+        // Output : a is even number
+
+        //  Example : if...else if...else Statement
+        var a = 20;
+        if (a == 10) {
+            console.log("a is equal to 10");
+        }
+        else if (a == 15) {
+            console.log("a is equal to 15");
+        }
+        else if (a == 20) {
+            console.log("a is equal to 20");
+        }
+        else {
+            console.log("a is not equal to 10, 15 or 20");
+        }
+        // Output :  a is equal to 20
+
+
+    </script>
+</body>
+
+</html>

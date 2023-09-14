@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body onload="handlePageLoad()">
+    <section>
+        <div class="container">
+            <h1>Events</h1>
+            <p>JavaScript events are actions that occur in the browser, such as user interactions or page events. They
+                can
+                be detected and handled using JavaScript to trigger specific actions. Examples include click, mouseover,
+                keydown, and load events, enabling interactivity and dynamic behavior in web applications.</p>
+            <h4 class="text_center">Mouse events</h4>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Event Performed</th>
+                        <th>Event Handler</th>
+                        <th>Description</th>
+                        <th>Examples</th>
+                    </tr>
+                    <tr>
+                        <td>click</td>
+                        <td>onclick</td>
+                        <td>The <code>onclick</code> event is triggered when an element is clicked by the user. </td>
+                        <td><button onclick="handleClick()">Click me</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Right click</td>
+                        <td>oncontextmenu</td>
+                        <td>The <code>oncontextmenu</code> event is triggered when the user right-clicks on an element
+                            to open the context menu. </td>
+                        <td><button oncontextmenu="handleContextMenu(event)">Right-click me</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>double-clicked</td>
+                        <td>ondblclick</td>
+                        <td> The <code>ondblclick</code> triggered when an element is double-clicked by the user.</td>
+                        <td><button ondblclick="handleDoubleClick()">Double-click me</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>mouseover</td>
+                        <td>onmouseover</td>
+                        <td>The <code>onmouseover</code> event is triggered when the mouse pointer moves over an
+                            element.</td>
+                        <td><button onmouseover="handleMouseOver()">Move the mouse over me</button></td>
+                    </tr>
+                    <tr>
+                        <td>mouseout</td>
+                        <td>onmouseout</td>
+                        <td>The <code>onmouseout</code> event is triggered when the mouse pointer moves out of an
+                            element.</td>
+                        <td><button onmouseout="handleMouseOut()">Move the mouse over me</button></td>
+                    </tr>
+                    <tr>
+                        <td>mousedown</td>
+                        <td>onmousedown</td>
+                        <td>The <code>onmousedown</code> event is triggered when a mouse button is pressed down on an
+                            element.</td>
+                        <td><button onmousedown="handleMouseDown()">Press and hold me</button></td>
+                    </tr>
+                    <tr>
+                        <td>mouseup</td>
+                        <td>onmouseup</td>
+                        <td>The <code>onmouseup</code> event is triggered when a mouse button is released after being
+                            pressed down on an element.</td>
+                        <td><button onmouseup="handleMouseUp()">Release me</button></td>
+                    </tr>
+                    <tr>
+                        <td>mousemove</td>
+                        <td>onmousemove</td>
+                        <td>The <code>onmousemove</code> event is triggered when the mouse pointer is moved over an
+                            element. </td>
+                        <td><button onmousemove="handleMouseMove(event)" style="width: 200px; height: 80px;">Move the
+                                mouse over
+                                me</button> <br>
+                            <span>this button Output in Inspect</span>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+
+            <h4 class="text_center">Keyboard events</h4>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Event Performed</th>
+                        <th>Event Handler</th>
+                        <th>Description</th>
+                        <th>Examples</th>
+                    </tr>
+                    <tr>
+                        <td>Keydown</td>
+                        <td>onkeydown </td>
+                        <td>The <code>onkeydown</code> event is triggered when a key on the keyboard is pressed down.
+                        </td>
+                        <td><input type="text" placeholder="Enter any key" onkeydown="handleKeyDown(event)"></td>
+                    </tr>
+                    <tr>
+                        <td>Keyup</td>
+                        <td>onkeyup</td>
+                        <td>The <code>onkeyup</code> event is triggered when a key on the keyboard is released after
+                            being pressed down.</td>
+                        <td><input type="text" placeholder="Enter any key" onkeyup="handleKeyUp(event)"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="text_center">Form events</h4>
+            <table class="alt">
+                <tbody>
+                    <tr>
+                        <th>Event Performed</th>
+                        <th>Event Handler</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>focus</td>
+                        <td>onfocus</td>
+                        <td>The onfocus event is triggered when an element receives focus, typically through user
+                            interaction such as clicking or tabbing onto the element.</td>
+                        <td><input type="text" id="myInput" placeholder="Text" onfocus="handleFocus()"></td>
+                    </tr>
+                    <tr>
+                        <td>submit</td>
+                        <td>onsubmit</td>
+                        <td>The <code>onsubmit</code> event is triggered when a form is submitted, either by clicking a
+                            submit button
+                            or programmatically through JavaScript.</td>
+                        <td>
+                            <form onsubmit="handleSubmit(event)">
+                                <input type="text" name="name" required>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>blur</td>
+                        <td>onblur</td>
+                        <td>The <code>onblur</code> event is triggered when an element loses focus, typically when the
+                            user clicks
+                            outside the element or tabs away from it.</td>
+                        <td><input type="text" placeholder="Text" onblur="handleBlur()"></td>
+                    </tr>
+                    <tr>
+                        <td>change</td>
+                        <td>onchange</td>
+                        <td>When the user modifies or changes the value of a form element</td>
+                        <td>
+                            <select onchange="handleSelectionChange()">
+                                <option value="option1">Option 1</option>
+                                <option value="option2">Option 2</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="text_center">Window events</h4>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Event Performed</th>
+                        <th>Event Handler</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>load</td>
+                        <td>onload</td>
+                        <td>The <code>onload</code> event is triggered when a webpage or an element within the webpage
+                            has finished
+                            loading. </td>
+                        <td>this <code>onload</code> event is write in body tag. and refresh page and show alert box.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>unload</td>
+                        <td>onunload</td>
+                        <td>The <code>onunload</code> event is triggered when a user navigates away from a webpage or
+                            closes the
+                            window/tab. It allows you to perform actions or execute JavaScript functions before the user
+                            leaves the page. </td>
+
+                    </tr>
+                    <tr>
+                        <td>resize</td>
+                        <td>onresize</td>
+                        <td>The onresize event is triggered when the browser window is resized by the user.</td>
+                        <td>this <code>onresize</code> event is write in JavaScript page resized call this event</td>
+                    </tr>
+                    <tr>
+                        <td>Scroll</td>
+                        <td>onscroll</td>
+                        <td>The onscroll event is triggered when the user scrolls the content of an element, such as a
+                            webpage or a specific container. </td>
+                        <td>this <code>onscroll</code> event is write in JavaScript page Scroll call this event
+                            <span>this Scroll Output in Inspect</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+
+    <script>
+
+        // Mouse events
+
+        function handleClick() {
+            alert(" onclick Button clicked!");
+        }
+
+        function handleContextMenu(event) {
+            event.preventDefault(); // Prevent the default context menu
+            alert("Context menu opened");
+        }
+
+        function handleDoubleClick() {
+            alert("Element double-clicked");
+        }
+
+        function handleMouseOver() {
+            alert("Mouse over event occurred");
+        }
+
+        function handleMouseOut() {
+            alert("Mouse out event occurred");
+        }
+
+        function handleMouseDown() {
+            alert("Mouse button pressed down");
+        }
+
+        function handleMouseUp() {
+            alert("Mouse button released");
+        }
+
+        function handleMouseMove(event) {
+            var x = event.clientX;
+            var y = event.clientY;
+            console.log("Mouse position: x=" + x + ", y=" + y);
+        }
+
+        // Keyboard events
+
+        function handleKeyDown(event) {
+            alert("Key pressed:" + event.key);
+        }
+
+        function handleKeyUp(event) {
+            alert("Key released:" + event.key);
+        }
+
+        // Form events
+
+        function handleFocus() {
+            alert("Element focused");
+            var inputElement = document.getElementById("myInput");
+            inputElement.blur();
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent form submission
+            alert("Form submitted");
+            // Additional form handling logic here
+        }
+
+        function handleBlur() {
+            alert("Element lost focus");
+        }
+
+        function handleSelectionChange() {
+            var selectedValue = event.target.value;
+            alert("Selected value changed: " + selectedValue);
+        }
+
+        // Window events
+
+        function handlePageLoad() {
+            alert("Page loaded");
+            // Additional actions or function calls here
+        }
+
+        window.onresize = function () {
+            alert("Window resized");
+            // Additional actions or function calls here
+        };
+
+        window.addEventListener("scroll", () => {
+            console.log("scroll");
+        });
+
+    </script>
+</body>
+
+</html>

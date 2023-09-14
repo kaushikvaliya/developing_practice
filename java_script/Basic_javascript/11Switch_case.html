@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch case</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <h1>switch case</h1>
+
+            <div class="row">
+                <div class="col_50">
+                    <h4>JavaScript switch case</h4>
+                    <p>The JavaScript switch statement is used for multi-way branching. It evaluates an expression and
+                        matches it against multiple cases, executing the code block associated with the matching case.
+                    </p>
+                    <p>The syntax of the <code>switch case</code> statement is:</p>
+                    <code><span>switch</span>(variable/expression) { <br>
+                        <span >case</span> value1:  <br>
+                            &nbsp; &nbsp;<span>// statement1;</span><br>
+                                <span>break</span>;<br>
+                        
+                            <span>case</span> value2:  <br>
+                            &nbsp; &nbsp;<span>// statement2;</span><br>
+                                <span class="hljs-keyword">break</span>;<br>
+                        
+                            <span>case</span> value3:<br>
+                            &nbsp; &nbsp;<span>// statement3;</span><br>
+                                <span>break</span>;<br>
+                        
+                            <span>default</span>:<br>
+                            &nbsp; &nbsp;<span >// statement </span><br>
+                        }</code>
+                </div>
+                <div class="col_50">
+                    <div class="img">
+                        <img src="assets/img/javascript-switch-case.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        let day = 7;
+        let dayName;
+
+        switch (day) {
+            case 1:
+                dayName = 'Sunday';
+                break;
+            case 2:
+                dayName = 'Monday';
+                break;
+            case 3:
+                dayName = 'Tuesday';
+                break;
+            case 4:
+                dayName = 'Wednesday';
+                break;
+            case 5:
+                dayName = 'Thursday';
+                break;
+            case 6:
+                dayName = 'Friday';
+                break;
+            case 7:
+                dayName = 'Saturday';
+                break;
+            default:
+                dayName = 'Invalid day';
+        }
+
+        console.log(dayName);  // Output : Saturday
+
+    </script>
+
+</body>
+
+</html>

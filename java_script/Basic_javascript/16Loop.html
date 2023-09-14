@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <h1>Loop</h1>
+
+            <p>In programming, loops are used to repeat a block of code.</p>
+            <p>For example, if you want to show a message 100 times, then you can use a loop. It's just a simple
+                example; you can achieve much more with loops.</p>
+
+            <h4 class="text_center font_size">for loop</h4>
+            <div class="row align_items_center">
+                <div class="col_50">
+                    <p>The <code>syntax</code> of the for loop is :</p>
+                    <code>
+                        <span class="d_block">for (initialExpression; condition; updateExpression) {</span>
+                        <span class="d_block"> &emsp;&emsp;  // for loop body</span>
+                        <span class="d_block">}</span>
+                    </code>
+
+
+                    <ol>
+                        <li>The <strong>initialExpression</strong> initializes and/or declares variables and executes
+                            only once.
+                        </li>
+                        <li>The <strong>condition</strong> is evaluated.
+                            <ul>
+                                <li>If the condition is <code>false</code>, the <code>for</code> loop is terminated.
+                                </li>
+                                <li>If the condition is <code>true</code>, the block of code inside of the
+                                    <code>for</code> loop
+                                    is executed.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>The <strong>updateExpression</strong> updates the value of
+                            <strong>initialExpression</strong> when
+                            the condition is <code>true</code>.
+                        </li>
+                        <li>The <strong>condition</strong> is evaluated again. This process continues until the
+                            condition is
+                            <code>false</code>.
+                        </li>
+                    </ol>
+                </div>
+                <div class="col_50">
+                    <div class="img">
+                        <img src="assets/img/javascript-for-loop.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+
+            <h4 class="text_center font_size">while Loop</h4>
+            <div class="row">
+                <div class="col_50">
+                    <p>The syntax of the <code>while</code> loop is:</p>
+                    <code>
+                        <span class="d_block">while (condition) {</span>
+                        <span class="d_block"> &emsp;&emsp;// body of loop</span>
+                        <span class="d_block">}</span>
+                    </code>
+                    <br><br>
+                    <ol>
+                        <li>A <code>while</code> loop evaluates the <strong>condition</strong> inside the parenthesis
+                            <code>()</code>.
+                        </li>
+                        <li>If the <strong>condition</strong> evaluates to <code>true</code>, the code inside the
+                            <code>while</code> loop is executed.
+                        </li>
+                        <li>The <strong>condition</strong> is evaluated again.</li>
+                        <li>This process continues until the <strong>condition</strong> is <code>false</code>.</li>
+                        <li>When the <strong>condition</strong> evaluates to <code>false</code>, the loop stops.</li>
+                    </ol>
+
+                </div>
+                <div class="col_50">
+                    <div class="img">
+                        <img src="assets/img/javascript-while-loop.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="text_center font_size">do...while </h4>
+            <div class="row">
+                <div class="col_50">
+                    <p>The syntax of <code>do...while</code> loop is : </p>
+                    <code>
+                        <span class="d_block">do {</span>
+                        <span class="d_block"> &emsp;&emsp; // body of loop</span>
+                        <span class="d_block">} while(condition)</span>
+                    </code>
+                    <br><br>
+                    <ol>
+                        <li>The body of the loop is executed at first. Then the <strong>condition</strong> is evaluated.
+                        </li>
+                        <li>If the <strong>condition</strong> evaluates to <code>true</code>, the body of the loop
+                            inside the <code>do</code> statement is executed again.</li>
+                        <li>The <strong>condition</strong> is evaluated once again.</li>
+                        <li>If the <strong>condition</strong> evaluates to <code>true</code>, the body of the loop
+                            inside the <code>do</code> statement is executed again.</li>
+                        <li>This process continues until the <strong>condition</strong> evaluates to <code>false</code>.
+                            Then the loop stops.</li>
+                    </ol>
+                </div>
+                <div class="col_50">
+                    <div class="img">
+                        <img src="assets/img/JavaScript_do_While_Loop.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        console.log("For loop");
+        // program to display text 5 times
+        const n = 5;
+        // looping from i = 1 to 5
+        for (let i = 1; i <= n; i++) {
+            console.log(i + ` I love JavaScript.`);
+        }
+
+
+        // program to display numbers from 1 to 5
+        // initialize the variable
+        console.log("while loop");
+        var i = 1, no = 5;
+        // while loop from i = 1 to 5
+        while (i <= no) {
+            console.log(i);
+            i += 1;
+        }
+
+
+        // program to display numbers
+        console.log("do...while loop");
+        let j = 1;
+        const k = 5;
+
+        // do...while loop from 1 to 5
+        do {
+            console.log(j);
+            j++;
+        } while (j <= k);
+
+
+
+        var even = [];
+        var odd = [];
+
+        for (let i = 1; i <= 10; i++) {
+            if (i % 2 === 0) {
+                even.push(i);
+            } else {
+                odd.push(i);
+            }
+        }
+
+        console.log(even.join(', ') + ' are even.');
+        console.log(odd.join(', ') + ' are odd.');
+    </script>
+</body>
+
+</html>

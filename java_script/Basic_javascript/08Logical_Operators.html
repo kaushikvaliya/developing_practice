@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operator</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="container">
+            <table border="0">
+                <thead>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td><code>&amp;&amp;</code></td>
+                        <td><strong>Logical AND</strong>: <code>true</code> if both the operands are <code>true</code>,
+                            else
+                            returns <code>false</code></td>
+                        <td><code>x &amp;&amp; y</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>||</code></td>
+                        <td><strong>Logical OR</strong>: <code>true</code> if either of the operands is
+                            <code>true</code>;
+                            returns false if both are <code>false</code>
+                        </td>
+                        <td><code>x || y</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>!</code></td>
+                        <td><strong>Logical NOT</strong>: <code>true</code> if the operand is <code>false</code> and
+                            vice-versa.
+                        </td>
+                        <td><code>!x</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script>
+        // logical AND
+        // run only when both  conditions must be true
+        var age = 20;
+        if (age >= 18 && age <= 21) {
+            console.log("both conditions true");
+        }
+
+        // logical OR
+
+        // run only when either one conditions must be true
+
+        var a = 20;
+        var b = 10;
+        if (a >= 18 || b <= 10) {
+            console.log("one conditions true");
+        }
+
+
+
+        // logical NOT
+
+        // console.log(a == 20); // true
+        console.log(!a == 20); // false
+
+        console.log(!a <= 20); // true
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

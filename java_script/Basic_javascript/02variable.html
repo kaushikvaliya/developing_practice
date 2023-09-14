@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> javascript variable</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<section>
+    <div class="container">
+        <h4>What are Variables?</h4>
+        <p>Variables are containers for storing data (storing data values).</p>
+        <p>There are two types of variables in JavaScript : local variable and global variable.</p>
+        <h3> There are Variable declaring some rules</h3>
+        <ol>
+            <li>Name must start with a letter (a to z or A to Z), underscore( _ ), or dollar( $ ) sign.</li>
+            <li>After first letter we can use digits (0 to 9), for example value1.</li>
+            <li>JavaScript variables are case sensitive, for example x and X are different variables.</li>
+            <li>You cannot use reserved keywords (such as "let", "const", "if", "else", "while", etc.) as variable
+                names.</li>
+        </ol>
+
+        <h2>When you create a variable, you declare it with the keywords let, var, const .</h2>
+        <table boder="1">
+            <thead>
+                <th>keywords</th>
+                <th>Scope</th>
+                <th>Can be Redeclareed</th>
+                <th>Can be Reassigned</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>var</td>
+                    <td>function & Global</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+
+                <tr>
+                    <td>let</td>
+                    <td>Block</td>
+                    <td>no</td>
+                    <td>Yes</td>
+                </tr>
+
+                <tr>
+                    <td>const</td>
+                    <td>Block</td>
+                    <td>no</td>
+                    <td>no</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+
+
+<body>
+    <script>
+        //  var is Redeclareed  ans Reassigned  hota hai
+        var fname = "kaushik"
+        var fname = "valiya" // Redeclareed ✅
+
+        fname = "vivek" // Reassigned ✅
+        console.log(fname); // no Error and sho : vivek 
+
+
+
+
+
+        //  let is  Redeclareed HOTA HAI or Reassigned  nahi hota hai
+        let variable = 'hello world';
+        // let variable = "hello friends";  // Redeclareed  ❌  output : Error
+        variable = "hello friends";  // Reassigned   ✅  output : hello friends
+        console.log(variable);
+
+
+
+        //  const is  no Redeclareed and no Reassigned  
+
+        const lname = "hello";
+        // const lname = "hello"; // no  Redeclareed  ❌  output : Error
+        // const lname = "Hey"; // no  Reassigned  ❌  output : Error
+        console.log(lname);
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

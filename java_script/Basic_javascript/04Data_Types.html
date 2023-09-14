@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+
+            <h1>JavaScript Datatypes</h1>
+
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th><strong>Data Types</strong></th>
+                        <th><strong>Description</strong></th>
+                        <th><strong>Example</strong></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>String</td>
+                        <td>Contains a group of characters</td>
+                        <td>'hello', “hello, world!”</td>
+                    </tr>
+                    <tr>
+                        <td>Number</td>
+                        <td>Includes an integer or a floating-point number, or an exponential value</td>
+                        <td>5, -56, 2567.54</td>
+                    </tr>
+                    <tr>
+                        <td>Boolean</td>
+                        <td>Contains any of two values - true or false</td>
+                        <td>True and false</td>
+                    </tr>
+                    <tr>
+                        <td>undefined</td>
+                        <td>It denotes that a variable is just declared and is not assigned any value</td>
+                        <td>let a;</td>
+                    </tr>
+                    <tr>
+                        <td>null</td>
+                        <td>Denotes no value</td>
+                        <td>let x = null;</td>
+                    </tr>
+
+                    <tr>
+                        <td>Object</td>
+                        <td>key-value pairs of collection of data</td>
+                        <td>let emp = { };</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="row">
+                <div class="col_50">
+                    <h4>String</h4>
+                    <p>A string data type is a group of characters or textual content enclosed by single quotes (' ') or
+                        double-quotes (" "), or tick signs (` `).</p>
+                </div>
+                <div class="col_50">
+                    <h4>Number</h4>
+                    <p>A number data type is a numeric value. It can be an integer (positive or negative), a
+                        floating-point
+                        value, or an exponential value.</p>
+                </div>
+                <div class="col_50">
+                    <h4>Boolean</h4>
+                    <p>Boolean is a logical data type that is used to compare two variables or to check a condition. It
+                        has only two values, namely, true and false.</p>
+                </div>
+
+                <div class="col_50">
+                    <h4>Undefined</h4>
+                    <p>Undefined data type means that a variable is just declared and is not assigned any value. It is
+                        the default value of a variable that has not been defined.</p>
+                </div>
+
+                <div class="col_50">
+                    <h4>Null</h4>
+                    <p>A null value means no value. It means an empty value or absence of value.</p>
+                </div>
+
+                <div class="col_50">
+                    <h4>Object</h4>
+                    <p>An object data type stores multiple values or a collection of data in terms of properties and
+                        methods. It contains key-value pairs in its address. The properties of the object are written as
+                        key:value pairs. Each pair is separated by commas, enclosed in curly braces {}. The key must be
+                        a string and the value can be of any data type.</p>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+
+    </section>
+    <script>
+
+        // You can use the typeof operator to find the data type of a JavaScript variable.
+
+        var a = "kaushik";
+        // chek data type
+        console.log(typeof a); // this data type  is string
+
+        // string
+        var str1 = 'Hello, World!'
+        console.log(str1); // Output: Hello, World
+
+        // Number
+        console.log("🚀 ~ Number")
+        var a = 47;  // positive integer value
+        console.log(a); // Output: 47
+
+        var b = 629.5;  // floating point
+        console.log(b); // Output: 629.5
+
+        var c = -5; // number with negative value
+        console.log(c); // Output: -5 
+
+        // Nan – when we perform any operation between a number and a non-numeric value, the result is Nan.
+
+        var x = 'hello';
+        var y = 100;
+        console.log(x * y);	// Output: Nan 
+
+        // Boolean
+        console.log("🚀 ~ Boolean:")
+
+        var a = 10;
+        var b = 9;
+        console.log(a == b); // Output: false
+        console.log(a > b); // Output: true
+
+        // Undefined
+        var u;   // undefined
+        console.log(u); //  Output: undefined
+
+        // Null
+        var k = null;
+        console.log(k);   // Output:  null
+
+        // Object
+        var student = { StudentName: 'Kaushik', class: 7 };
+        // this log is show Object
+        console.log(student); // Output: {StudentName: 'Kaushik', class: 7}
+        // StudentName value show 
+        console.log(student.StudentName); // Output: Kaushik
+        console.log(student.class); // Output: 7
+
+
+    </script>
+
+
+
+</body>
+
+</html>

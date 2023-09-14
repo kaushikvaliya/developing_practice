@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="container">
+            <h1>Comparison Operators</h1>
+            <p class="text_center">Comparison operators <strong>compare</strong> two values and return a boolean value,
+                either <strong>true</strong> or <strong>false</strong>.
+
+            </p>
+            <table border="0">
+                <thead>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td><code>==</code></td>
+                        <td><strong>Equal to</strong>: returns <code>true</code> if the operands are equal</td>
+                        <td><code>x == y</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>!=</code></td>
+                        <td><strong>Not equal to</strong>: returns <code>true</code> if the operands are not equal</td>
+                        <td><code>x != y</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>===</code></td>
+                        <td><strong>Strict equal to</strong>: <code>true</code> if the operands are equal and of the
+                            same type</td>
+                        <td><code>x === y</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>!==</code></td>
+                        <td><strong>Strict not equal to</strong>: <code>true</code> if the operands are equal but of
+                            different type or not equal at all</td>
+                        <td><code>x !== y</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&gt;</code></td>
+                        <td><strong>Greater than</strong>: <code>true</code> if left operand is greater than the right
+                            operand</td>
+                        <td><code>x &gt; y</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&gt;=</code></td>
+                        <td><strong>Greater than or equal to</strong>: <code>true</code> if left operand is greater than
+                            or equal to the right operand</td>
+                        <td><code>x &gt;= y</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;</code></td>
+                        <td><strong>Less than</strong>: <code>true</code> if the left operand is less than the right
+                            operand</td>
+                        <td><code>x &lt; y</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;=</code></td>
+                        <td><strong>Less than or equal to</strong>: <code>true</code> if the left operand is less than
+                            or equal to the right operand</td>
+                        <td><code>x &lt;= y</code></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+
+    <script>
+        // equal operator
+        console.log('Equal operator');
+        console.log(2 == 2); // Output: true
+        console.log(2 == '2'); // Output: true
+
+        // not equal operator
+        console.log("Not equal operator");
+        console.log(3 != 2); // Output: true
+        console.log('hello' != 'Hello'); // Output: true
+
+        // strict equal operator
+        console.log("strict equal operator");
+        console.log(2 === 2); // Output: true
+        console.log(2 === '2'); // Output: false
+
+        // strict not equal operator
+        console.log("strict not equal operator");
+        console.log(2 !== '2'); // Output: true
+        console.log(2 !== 2); // Output: false
+
+        // Greater than 
+        console.log("Greater than");
+        let x = 5;
+        console.log(x > 8); // Output: false
+
+        // Greater than or equal to
+        console.log("Greater than or equal to");
+        console.log(x >= 8); // Output: false
+
+        // Less than 
+        console.log("Less than");
+        console.log(x < 8); // Output: true
+
+        // Less than or equal to
+
+        console.log("Less than or equal to");
+        console.log(x <= 8); // Output: true
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

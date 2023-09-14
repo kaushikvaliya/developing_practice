@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <table border="0">
+
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+        </tr>
+
+        <tr>
+            <td>sort()</td>
+            <td>sorts the elements alphabetically in strings and in ascending order</td>
+        </tr>
+
+        <tr>
+            <td>reverse() </td>
+            <td>Reverses the order of the elements in an array.</td>
+        </tr>
+
+        <tr>
+            <td>pop()</td>
+            <td>removes the last element of an array and returns the removed element</td>
+        </tr>
+
+        <tr>
+            <td>push</td>
+            <td>Adds one or more elements to the end of an array and returns the new length of the array.</td>
+        </tr>
+
+        <tr>
+            <td>shift()</td>
+            <td>removes the first element of an array and returns the removed element</td>
+        </tr>
+
+        <tr>
+            <td>unshift()</td>
+            <td>adds a new element to the beginning of an array and returns the new length of an array</td>
+        </tr>
+
+        <tr>
+            <td>concat()</td>
+            <td>joins two or more arrays and returns a result</td>
+        </tr>
+        <tr>
+            <td>join()</td>
+            <td>Joins all elements of an array into a string, separated by a specified delimiter.</td>
+        </tr>
+
+
+        <tr>
+            <td>slice()</td>
+            <td>selects the part of an array and returns the new array</td>
+        </tr>
+        <tr>
+            <td>splice()</td>
+            <td>removes or replaces existing elements and/or adds new elements</td>
+        </tr>
+
+        <tr>
+            <td>indexOf()</td>
+            <td>searches an element of an array and returns its position</td>
+        </tr>
+
+        <tr>
+            <td>lastIndexOf()</td>
+            <td>Returns the last index at which a given element can be found in the array, or -1 if it is not present.
+            </td>
+        </tr>
+
+        <tr>
+            <td>Includes()</td>
+            <td>Determines whether an array includes a certain element, returning true or false as appropriate.</td>
+        </tr>
+
+        <tr>
+            <td>find()</td>
+            <td>Returns the first element in the array that satisfies the provided testing function.</td>
+        </tr>
+
+        <tr>
+            <td>findIndex()</td>
+            <td>Returns the index of the first element in the array that satisfies the provided testing function.</td>
+        </tr>
+
+        <tr>
+            <td>filter()</td>
+            <td>Creates a new array with all elements that pass the test implemented by the provided function.</td>
+        </tr>
+        <tr>
+            <td>toString()</td>
+            <td>Returns a string representing the specified array and its elements..</td>
+        </tr>
+
+
+
+        <tr>
+            <td>forEach()</td>
+            <td>calls a function for each element</td>
+        </tr>
+
+
+    </table>
+
+
+
+
+
+    <script>
+
+        // sort ()
+        console.log("🚀 ~ sort:")
+        // const fruits1 = ['banana', 'apple', 'orange'];
+        // fruits1.sort();
+        // console.log(fruits1); // Output: ['apple', 'banana', 'orange']
+
+        // const nums = [6, 7, 8, 10, 2, 3, 4, 5, 9, 1];
+        // nums.sort((a, b) => a - b);
+        // console.log(nums); // Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+        // reverse()
+        console.log("🚀 ~ reverse:")
+
+        // const numbers = [1, 2, 3, 4, 5];
+        // numbers.reverse();
+        // console.log(numbers); // Output: [5, 4, 3, 2, 1]
+
+        console.log("🚀 ~ pop:");
+
+        // const numbers = [1, 2, 3, 4, 5];
+        // const lastElement = numbers.pop();
+        // console.log(lastElement); // Output: 5
+        // console.log(numbers); // Output: [1, 2, 3, 4]
+
+
+        console.log("🚀 ~ push:")
+        // const numbers = [1, 2, 3];
+        // numbers.push(4, 5);
+        // console.log(numbers); // Output: [1, 2, 3, 4, 5]
+
+
+        console.log("🚀 ~ shift:")
+        // const numbers = [1, 2, 3, 4, 5];
+        // const firstElement = numbers.shift();
+        // console.log('remove firstElement', firstElement); // Output: 1
+        // console.log(numbers); // Output: [2, 3, 4, 5]
+
+        console.log("🚀 ~ unshift:")
+        // const numbers = [2, 3, 4, 5];
+        // numbers.unshift(1);
+        // console.log(numbers); // Output: [1, 2, 3, 4, 5]
+
+
+
+        console.log("🚀 ~ concat:")
+
+        // const array1 = [1, 2, 3];
+        // const array2 = [4, 5, 6];
+        // const newArray = array1.concat(array2);
+        // console.log(newArray); // Output: [1, 2, 3, 4, 5, 6]
+
+
+
+        console.log("🚀 ~ join:");
+
+        const elements = ['Hello', 'World', '!'];
+        // console.log("🚀 ~ elements:", elements)
+        // const result = elements.join(' ');
+        // console.log(result); // Output: "Hello World !"
+
+
+        console.log("🚀 ~ slice:")
+        //  syntax slice  slice(strt, end)
+
+        // const numbers = [1, 2, 3, 4, 5];
+        // const slicedArray = numbers.slice(2, 4);
+        // console.log(slicedArray); // Output: [3, 4]
+
+
+        console.log("🚀 ~ splice:")
+        //  syntax Splice  Splice( indexes, hovmany deletes )
+
+        // splice(2,2)  delete a 2 element array from the array
+
+        // const numbers = [1, 2, 3, 4, 5];
+        // numbers.splice(2, 2, 'a', 'b');
+        // console.log(numbers); // Output: [1, 2, 'a', 'b', 5]
+
+        // splice(2,0) not a  delete a 2 element array from the array
+
+        // const numbers = [1, 2, 3, 4, 5];
+        // numbers.splice(2, 0, 'a', 'b');
+        // console.log(numbers); // Output: [1, 2, 'a', 'b', 3, 4, 5]
+
+
+
+
+        console.log("🚀 ~ indexOf:")
+
+        // const fruits = ['apple', 'banana', 'orange', 'apple'];
+        // const index = fruits.indexOf('orange');
+        //  surcharge star 1 index of array
+        // const index = fruits.indexOf('apple', 1);
+        // console.log(index); // Output: 0
+
+
+
+
+        console.log("🚀 ~ lastIndexOf:")
+
+        // const fruits = ['apple', 'banana', 'orange', 'apple'];
+        // const lastIndex = fruits.lastIndexOf('apple');
+        // const lastIndex = fruits.lastIndexOf('apple', 1);
+        // console.log(lastIndex); // Output: 3
+
+
+        console.log("🚀 ~ includes:")
+
+        // Includes syntax   Includes(search terms)
+
+        // const fruits = ['apple', 'banana', 'orange', 'apple'];
+        // const numbers = [1, 2, 3, 4, 5];
+        // const includesThree = numbers.includes(3);
+        // const includesThree = fruits.includes("apple");
+        // console.log(includesThree); // Output: true
+
+
+
+        console.log("🚀 ~ find:")
+        // const numbers = [1, 2, 3, 4, 5];
+        // const firstEvenNumber = numbers.find((number) => number % 2 === 0);
+        // const firstEvenNumber = numbers.find(checknumber);
+        // console.log(firstEvenNumber); // Output: 2
+
+        // function checknumber(number) {
+        //     return number % 2 === 0;
+        // }
+
+        // function checknumber(number) {
+        //     return number > 3;
+        // }
+
+
+        console.log("🚀 ~ findIndex:")
+        // const numbers = [1, 2, 3, 4, 5];
+        // // const firstEvenNumberIndex = numbers.findIndex((number) => number % 2 === 0);
+        // const firstEvenNumberIndex = numbers.findIndex(checkNumber);
+        // console.log(firstEvenNumberIndex); // Output: 2
+
+        // function checkNumber(number) {
+        //     return number % 2 === 0;
+        // }
+
+        // function checkNumber(number) {
+        //     return number >= 3;
+        // }
+
+
+
+        console.log("🚀 ~ filter:")
+
+        // const numbers = [1, 2, 3, 4, 5];
+        // // const evenNumbers = numbers.filter((number) => number % 2 === 0);
+        // const evenNumbers = numbers.filter(checkNumber);
+        // console.log(evenNumbers); // Output: [2, 4]
+
+        // function checkNumber(number) {
+        //     return number % 2 === 0;
+        // }
+
+        // function checkNumber(number) {
+        //     return number >= 3;
+        // }
+
+
+        // console.log("🚀 ~ toString:")
+
+        // const numbers = [1, 2, 3];
+        // const arrayString = numbers.toString();
+        // console.log(arrayString); // Output: "1,2,3"
+
+
+
+
+        console.log("🚀 ~ forEach:");
+
+        // const numbers = [1, 2, 3];
+
+        // numbers.forEach((number, index) => {
+        //     console.log(index + " : " + number); // Output: 1, 2, 3
+        // });
+
+
+        // numbers.forEach((number) => {
+        //     console.log(number); // Output: 1, 2, 3
+        // });
+
+
+
+        // let array = [1, 2, 3, 4, 5];
+
+        // delete array[2]; // Delete element at index 2
+
+        // console.log("🚀 ~ array:", array)
+
+        // array = array.filter((element) => {
+        //     // console.log("🚀 ~ element:", element);
+        //     return element !== undefined;
+        // });
+
+        // console.log(array); // Output: [1, 2, 4, 5]
+
+
+
+
+
+
+
+        // console.log("🚀 ~ string:")
+
+        // const string = "Hello, World!";
+        // const array = string.split('');
+
+        // console.log(array);
+
+
+        // const string = "Hello, World!";
+        // const array = [...string];
+
+        // console.log(array);
+
+
+
+        // const string = "Hello, World!";
+        // console.log(Array.from(string));
+
+
+    </script>
+
+
+
+    <script>
+
+        //  let array7 = [1, 2, 3, 4, 5];
+        // let object = [
+        //     {
+        //         id: 1,
+        //         name: 'kaushik1'
+        //     },
+        //     {
+        //         id: 2,
+        //         name: "kaushik2"
+        //     },
+        //     {
+        //         id: 3,
+        //         name: "kaushik3"
+        //     },
+        //     {
+        //         id: 4,
+        //         name: "kaushik4"
+        //     },
+        //     {
+        //         id: 12,
+        //         name: "kaushik12"
+        //     },
+        //     {
+        //         id: 13,
+        //         name: "kaushik13"
+        //     }
+        // ];
+
+        // for (let i = 0; i < object.length; i++) {
+        //     if (object[i].id == array7[i]) {
+        //         console.log("Match for object at index", i);
+        //     } else {
+        //         console.log("No match for object at index", i);
+        //     }
+        // }
+
+
+        // object.forEach((item, i) => {
+        //     console.log(item);
+        //     console.log(array7[i]);
+        //     // if (item.id == array7[i]) {
+        //     //     console.log("Match for object at index", i);
+        //     // } else {
+        //     //     console.log("No match for object at index", i);
+        //     // }
+        // });
+    </script>
+</body>
+
+</html>
